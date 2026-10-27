@@ -1,0 +1,6007 @@
+{
+  "organizacion": "TechPeru S.A.C.",
+  "periodo": "2025",
+  "periodosDisponibles": ["2025", "2026", "2027", "2028"],
+  "perspectivas": {
+    "financiera": {
+      "id": "financiera",
+      "label": "Financiera",
+      "color": "#3478e5",
+      "soft": "#edf4ff",
+      "weight": 25,
+      "sheetName": "💰 Financiera",
+      "defaultOwner": "Patricia Ramos",
+      "defaultArea": "Finanzas y Contabilidad"
+    },
+    "clientes": {
+      "id": "clientes",
+      "label": "Clientes",
+      "color": "#18a875",
+      "soft": "#eaf8f1",
+      "weight": 25,
+      "sheetName": "👥 Clientes",
+      "defaultOwner": "Jorge Salcedo",
+      "defaultArea": "Gerencia Comercial"
+    },
+    "procesos": {
+      "id": "procesos",
+      "label": "Procesos internos",
+      "color": "#e99a2d",
+      "soft": "#fff5e6",
+      "weight": 25,
+      "sheetName": "🔧 Procesos",
+      "defaultOwner": "María Valdivia",
+      "defaultArea": "Operaciones y Calidad"
+    },
+    "aprendizaje": {
+      "id": "aprendizaje",
+      "label": "Aprendizaje y crecimiento",
+      "color": "#8b6bd6",
+      "soft": "#f2edff",
+      "weight": 25,
+      "sheetName": "📚 Aprendizaje",
+      "defaultOwner": "Lucía Paredes",
+      "defaultArea": "Gestión del Talento Humano"
+    }
+  },
+  "objectives": [
+    {
+      "id": "OBJ-F1",
+      "name": "Incrementar la Rentabilidad",
+      "perspective": "financiera",
+      "description": "Mejorar la rentabilidad del negocio optimizando el rendimiento sobre el capital y márgenes operativos.",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-F2",
+      "name": "Acelerar el Crecimiento de Ingresos",
+      "perspective": "financiera",
+      "description": "Impulsar el crecimiento sostenido de las ventas mediante expansión comercial y diversificación de productos.",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-F3",
+      "name": "Optimizar la Estructura de Costos",
+      "perspective": "financiera",
+      "description": "Aumentar la eficiencia en el uso de recursos operativos, reduciendo costos unitarios y gastos de adquisición.",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-C1",
+      "name": "Maximizar la Satisfacción del Cliente",
+      "perspective": "clientes",
+      "description": "Brindar una experiencia superior y consistente que maximice la satisfacción y resuelva quejas con agilidad.",
+      "owner": "Jorge Salcedo",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-C2",
+      "name": "Aumentar la Retención y Fidelización",
+      "perspective": "clientes",
+      "description": "Fidelizar a la cartera actual de clientes incrementando la recompra y reduciendo la tasa de abandono (churn).",
+      "owner": "Jorge Salcedo",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-C3",
+      "name": "Expandir la Base de Clientes",
+      "perspective": "clientes",
+      "description": "Captar nuevos segmentos de mercado e incrementar la cuota de participación con costos de adquisición eficientes.",
+      "owner": "Jorge Salcedo",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-P1",
+      "name": "Excelencia en Operaciones y Calidad",
+      "perspective": "procesos",
+      "description": "Asegurar la excelencia operativa, reduciendo tiempos de entrega y tasas de defectos en productos y servicios.",
+      "owner": "María Valdivia",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-P2",
+      "name": "Innovación y Desarrollo de Producto",
+      "perspective": "procesos",
+      "description": "Acelerar el ciclo de desarrollo e introducción de soluciones innovadoras que generen nuevos flujos de ingresos.",
+      "owner": "María Valdivia",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-P3",
+      "name": "Gestión Eficiente de Proveedores",
+      "perspective": "procesos",
+      "description": "Garantizar una cadena de suministro ágil y confiable con alto cumplimiento de entregas y control de inventarios.",
+      "owner": "María Valdivia",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-A1",
+      "name": "Desarrollar el Capital Humano",
+      "perspective": "aprendizaje",
+      "description": "Capacitar y certificar a los colaboradores en competencias estratégicas y planes de desarrollo profesional.",
+      "owner": "Lucía Paredes",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-A2",
+      "name": "Fortalecer la Cultura y el Clima",
+      "perspective": "aprendizaje",
+      "description": "Fomentar un clima organizacional de alta motivación, sentido de pertenencia y baja rotación laboral.",
+      "owner": "Lucía Paredes",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-A3",
+      "name": "Impulsar la Innovación Organizacional",
+      "perspective": "aprendizaje",
+      "description": "Consolidar una cultura de mejora continua e innovación que traduzca ideas de empleados en proyectos activos.",
+      "owner": "Lucía Paredes",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-02"
+    },
+    {
+      "id": "OBJ-F4",
+      "name": "Optimizar la Liquidez y Gestión del Capital de Trabajo",
+      "perspective": "financiera",
+      "description": "Optimizar la liquidez corriente y agilizar los días de cobro para maximizar la eficiencia del capital de trabajo.",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-F5",
+      "name": "Maximizar la Rentabilidad de Servicios Cloud y Consultoría",
+      "perspective": "financiera",
+      "description": "Maximizar la rentabilidad en la unidad de soluciones Cloud y elevar el valor de vida del cliente corporativo.",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-C4",
+      "name": "Fortalecer la Experiencia Digital y Autogestión B2B",
+      "perspective": "clientes",
+      "description": "Fortalecer la autogestión de clientes B2B mediante plataformas digitales y reducir tiempos de cotización.",
+      "owner": "Jorge Salcedo",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-C5",
+      "name": "Consolidar Alianzas Estratégicas y Cuentas Clave",
+      "perspective": "clientes",
+      "description": "Consolidar alianzas a largo plazo asegurando la renovación contractual y fomentando la venta cruzada.",
+      "owner": "Jorge Salcedo",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-P4",
+      "name": "Asegurar la Continuidad Operativa y Ciberseguridad TI",
+      "perspective": "procesos",
+      "description": "Garantizar alta disponibilidad en servicios tecnológicos corporativos y rápida mitigación de incidentes.",
+      "owner": "María Valdivia",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-P5",
+      "name": "Optimizar la Cadena de Suministro y Gestión de Garantías RMA",
+      "perspective": "procesos",
+      "description": "Acelerar la rotación del inventario de hardware tecnológico y optimizar los tiempos de resolución de garantías RMA.",
+      "owner": "Elena Morales",
+      "priority": "Media",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-A4",
+      "name": "Desarrollar Especialización Técnica y Certificaciones Oficiales",
+      "perspective": "aprendizaje",
+      "description": "Acreditar a ingenieros y consultores en certificaciones oficiales e incrementar la inversión por colaborador.",
+      "owner": "Lucía Paredes",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-A5",
+      "name": "Fortalecer la Retención de Talento Crítico y Base del Conocimiento",
+      "perspective": "aprendizaje",
+      "description": "Retener al talento especializado crítico y consolidar la base del conocimiento corporativo (KMS).",
+      "owner": "Lucía Paredes",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2025-01-05"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "KPI-01",
+      "name": "ROE – Retorno sobre Patrimonio",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F1",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 13.5,
+      "target": 18,
+      "current": 18,
+      "direction": "directo",
+      "pct": 100,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "ROE por debajo del 18% meta. Revisar estructura de capital y palanca financiera.",
+      "measurements": [
+        {
+          "id": "M-KPI-01-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 13.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 14.59,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 14.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 15.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 14.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 15.79,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 15.27,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 16.39,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 15.87,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-01-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 16.5,
+          "notes": "ROE por debajo del 18% meta. Revisar estructura de capital y palanca financiera.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-02",
+      "name": "Margen EBITDA",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F1",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 16.5,
+      "target": 22,
+      "current": 19.8,
+      "direction": "directo",
+      "pct": 90,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Margen comprimido por costos operativos. Plan de reducción de gastos en Q3-Q4.",
+      "measurements": [
+        {
+          "id": "M-KPI-02-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 16.43,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 17.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 17.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 18.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 17.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 19.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 18.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 19.73,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 19.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-02-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 19.8,
+          "notes": "Margen comprimido por costos operativos. Plan de reducción de gastos en Q3-Q4.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-03",
+      "name": "Utilidad Neta Anual",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F1",
+      "unit": "S/ MM",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 1.58,
+      "target": 2.1,
+      "current": 1.87,
+      "direction": "directo",
+      "pct": 89,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Utilidad neta al 89% de la meta. Requiere incremento de márgenes o volumen.",
+      "measurements": [
+        {
+          "id": "M-KPI-03-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 1.57,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 1.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 1.63,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 1.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 1.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 1.81,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 1.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 1.87,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 1.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-03-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 1.87,
+          "notes": "Utilidad neta al 89% de la meta. Requiere incremento de márgenes o volumen.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-04",
+      "name": "Crecimiento de Ventas YoY",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 11.25,
+      "target": 15,
+      "current": 12.3,
+      "direction": "directo",
+      "pct": 82,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Crecimiento al 82% de la meta. Acelerar pipeline comercial y campañas de upsell.",
+      "measurements": [
+        {
+          "id": "M-KPI-04-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 11.11,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 11.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 11.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 12.04,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 11.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 12.25,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 11.74,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 12.46,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 11.95,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-04-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 12.3,
+          "notes": "Crecimiento al 82% de la meta. Acelerar pipeline comercial y campañas de upsell.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-05",
+      "name": "Ingresos Totales Anuales",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F2",
+      "unit": "S/ MM",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 6.38,
+      "target": 8.5,
+      "current": 7.9,
+      "direction": "directo",
+      "pct": 92.9,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Ingresos 7.2% por debajo de meta. Revisar estrategia de precios y mix de productos.",
+      "measurements": [
+        {
+          "id": "M-KPI-05-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 6.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 6.68,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 7.23,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 6.98,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 7.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 7.29,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 7.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 7.59,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-05-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 7.9,
+          "notes": "Ingresos 7.2% por debajo de meta. Revisar estrategia de precios y mix de productos.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-06",
+      "name": "Ingresos por Nuevos Productos",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 15,
+      "target": 20,
+      "current": 15.6,
+      "direction": "directo",
+      "pct": 78,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Andrés Castro",
+      "area": "Innovación y Desarrollo",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Nuevos productos aportan 15.6% vs. 20% meta. Acelerar lanzamiento de Pipeline Q3.",
+      "measurements": [
+        {
+          "id": "M-KPI-06-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 14.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 15.59,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 14.87,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 15.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 14.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 15.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 15.11,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 15.95,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 15.23,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-06-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 15.6,
+          "notes": "Nuevos productos aportan 15.6% vs. 20% meta. Acelerar lanzamiento de Pipeline Q3.",
+          "responsible": "Andrés Castro"
+        }
+      ]
+    },
+    {
+      "id": "KPI-07",
+      "name": "Ratio Costo Operativo / Ingreso",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F3",
+      "unit": "%",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 68.75,
+      "target": 55,
+      "current": 58.2,
+      "direction": "inverso",
+      "pct": 94.5,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Ratio de costo elevado (58.2% vs 55% meta). Automatizar procesos para reducir costos.",
+      "measurements": [
+        {
+          "id": "M-KPI-07-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 70.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 64.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 68.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 62.78,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 66.39,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 60.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 64.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 58.56,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 62.17,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-07-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 58.2,
+          "notes": "Ratio de costo elevado (58.2% vs 55% meta). Automatizar procesos para reducir costos.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-08",
+      "name": "Costo de Adquisición de Cliente (CAC)",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F3",
+      "unit": "S/",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 437.5,
+      "target": 350,
+      "current": 412,
+      "direction": "inverso",
+      "pct": 85,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "CAC de S/412 vs S/350 meta. Optimizar canales de adquisición digital.",
+      "measurements": [
+        {
+          "id": "M-KPI-08-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 455.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 420.04,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 450.45,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 414.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 445.35,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 409.84,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 440.25,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 404.74,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 435.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-08-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 412,
+          "notes": "CAC de S/412 vs S/350 meta. Optimizar canales de adquisición digital.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-09",
+      "name": "Retorno sobre Activos (ROA)",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F3",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 6.75,
+      "target": 9,
+      "current": 7.8,
+      "direction": "directo",
+      "pct": 86.7,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "ROA bajo meta. Revisar eficiencia de activos y desinversión de activos ociosos.",
+      "measurements": [
+        {
+          "id": "M-KPI-09-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 7.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 6.91,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 7.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 7.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 7.61,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 7.33,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 7.82,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 7.54,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-09-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 7.8,
+          "notes": "ROA bajo meta. Revisar eficiencia de activos y desinversión de activos ociosos.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-10",
+      "name": "NPS – Net Promoter Score",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C1",
+      "unit": "pts",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 48.75,
+      "target": 65,
+      "current": 58,
+      "direction": "directo",
+      "pct": 89.2,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "NPS de 58 (meta 65). Implementar programa de seguimiento post-venta en 30/60/90 días.",
+      "measurements": [
+        {
+          "id": "M-KPI-10-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 48.52,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 52.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 50.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 54.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 52.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 56.04,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 54.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 57.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 55.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-10-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 58,
+          "notes": "NPS de 58 (meta 65). Implementar programa de seguimiento post-venta en 30/60/90 días.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-11",
+      "name": "CSAT – Satisfacción post-venta",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C1",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 66,
+      "target": 88,
+      "current": 84,
+      "direction": "directo",
+      "pct": 95.5,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "CSAT al 95.5% de meta. Reforzar proceso de onboarding y soporte técnico.",
+      "measurements": [
+        {
+          "id": "M-KPI-11-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 66.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 72.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 69.72,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 75.72,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 73.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 79.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 76.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 82.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 80.52,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-11-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 84,
+          "notes": "CSAT al 95.5% de meta. Reforzar proceso de onboarding y soporte técnico.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-12",
+      "name": "Tiempo de Resolución de Quejas",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C1",
+      "unit": "días",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 2.5,
+      "target": 2,
+      "current": 2.8,
+      "direction": "inverso",
+      "pct": 71.4,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Tiempo de resolución 2.8 días vs. 2 días meta. Crear equipo dedicado de soporte nivel 2.",
+      "measurements": [
+        {
+          "id": "M-KPI-12-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 2.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 2.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 2.73,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 2.54,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 2.79,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 2.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 2.85,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 2.66,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 2.91,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-12-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 2.8,
+          "notes": "Tiempo de resolución 2.8 días vs. 2 días meta. Crear equipo dedicado de soporte nivel 2.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-13",
+      "name": "Tasa de Retención de Clientes",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 67.5,
+      "target": 90,
+      "current": 87,
+      "direction": "directo",
+      "pct": 96.7,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Retención al 96.7% de meta. Lanzar programa de fidelización con descuentos por volumen.",
+      "measurements": [
+        {
+          "id": "M-KPI-13-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 67.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 74.01,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 71.61,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 77.91,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 75.51,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 81.81,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 79.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 85.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 83.31,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-13-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 87,
+          "notes": "Retención al 96.7% de meta. Lanzar programa de fidelización con descuentos por volumen.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-14",
+      "name": "Tasa de Recompra (Repeat Purchase)",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 41.25,
+      "target": 55,
+      "current": 49,
+      "direction": "directo",
+      "pct": 89.1,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Recompra al 89% de meta. Implementar campañas de re-engagement a los 90 días.",
+      "measurements": [
+        {
+          "id": "M-KPI-14-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 41.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 44.27,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 42.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 45.82,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 44.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 47.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 45.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 48.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 47.25,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-14-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 49,
+          "notes": "Recompra al 89% de meta. Implementar campañas de re-engagement a los 90 días.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-15",
+      "name": "Churn Rate (Tasa de Abandono)",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C2",
+      "unit": "%",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 6.25,
+      "target": 5,
+      "current": 7.2,
+      "direction": "inverso",
+      "pct": 69.4,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Churn 7.2% vs. 5% meta (KPI inverso — CRÍTICO). Crear equipo de Customer Success.",
+      "measurements": [
+        {
+          "id": "M-KPI-15-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 6.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 6.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 6.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 7.08,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 6.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 7.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 6.79,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 7.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-15-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 7.2,
+          "notes": "Churn 7.2% vs. 5% meta (KPI inverso — CRÍTICO). Crear equipo de Customer Success.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-16",
+      "name": "Nuevos Clientes Adquiridos",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C3",
+      "unit": "#",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 90,
+      "target": 120,
+      "current": 105,
+      "direction": "directo",
+      "pct": 87.5,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "105 nuevos clientes vs. 120 meta (87.5%). Ampliar fuerza de ventas en regiones.",
+      "measurements": [
+        {
+          "id": "M-KPI-16-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 89.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 96.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 92.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 99.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 95.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 102.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 98.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 105.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 101.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-16-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 105,
+          "notes": "105 nuevos clientes vs. 120 meta (87.5%). Ampliar fuerza de ventas en regiones.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-17",
+      "name": "Cuota de Mercado",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C3",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 6.38,
+      "target": 8.5,
+      "current": 7.8,
+      "direction": "directo",
+      "pct": 91.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Cuota al 91.8% de meta. Ejecutar campañas de awareness en mercados objetivo.",
+      "measurements": [
+        {
+          "id": "M-KPI-17-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 6.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 6.65,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 7.18,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 6.93,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 7.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 7.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 7.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 7.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-17-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 7.8,
+          "notes": "Cuota al 91.8% de meta. Ejecutar campañas de awareness en mercados objetivo.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-18",
+      "name": "Costo por Lead Calificado",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C3",
+      "unit": "S/",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 225,
+      "target": 180,
+      "current": 215,
+      "direction": "inverso",
+      "pct": 83.7,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "CAC por lead elevado. Migrar mayor presupuesto a canales orgánicos (SEO/contenido).",
+      "measurements": [
+        {
+          "id": "M-KPI-18-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 234.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 216.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 232.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 214.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 230.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 212.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 228.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 210.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 226.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-18-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 215,
+          "notes": "CAC por lead elevado. Migrar mayor presupuesto a canales orgánicos (SEO/contenido).",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-19",
+      "name": "Tiempo Promedio de Entrega al Cliente",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P1",
+      "unit": "días",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 3.75,
+      "target": 3,
+      "current": 3.5,
+      "direction": "inverso",
+      "pct": 85.7,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Entrega en 3.5 días vs. 3 días meta. Revisar cuellos de botella en picking y despacho.",
+      "measurements": [
+        {
+          "id": "M-KPI-19-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 3.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 3.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 3.85,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 3.54,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 3.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 3.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 3.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 3.44,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 3.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-19-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 3.5,
+          "notes": "Entrega en 3.5 días vs. 3 días meta. Revisar cuellos de botella en picking y despacho.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-20",
+      "name": "Tasa de Defectos / Reclamos",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P1",
+      "unit": "%",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 2.5,
+      "target": 2,
+      "current": 2.8,
+      "direction": "inverso",
+      "pct": 71.4,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Defectos al 2.8% vs. 2% meta. Implementar control de calidad en cada etapa del proceso.",
+      "measurements": [
+        {
+          "id": "M-KPI-20-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 2.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 2.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 2.73,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 2.54,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 2.79,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 2.6,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 2.85,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 2.66,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 2.91,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-20-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 2.8,
+          "notes": "Defectos al 2.8% vs. 2% meta. Implementar control de calidad en cada etapa del proceso.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-21",
+      "name": "Productividad por Empleado",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P1",
+      "unit": "S/ MM",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 0.19,
+      "target": 0.25,
+      "current": 0.22,
+      "direction": "directo",
+      "pct": 88,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Productividad por debajo de meta. Automatizar tareas repetitivas con RPA.",
+      "measurements": [
+        {
+          "id": "M-KPI-21-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 0.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 0.2,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 0.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 0.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 0.2,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 0.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 0.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 0.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 0.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-21-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 0.22,
+          "notes": "Productividad por debajo de meta. Automatizar tareas repetitivas con RPA.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-22",
+      "name": "N° Lanzamientos de Nuevos Productos",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P2",
+      "unit": "#",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 3,
+      "target": 4,
+      "current": 3,
+      "direction": "directo",
+      "pct": 75,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Andrés Castro",
+      "area": "Innovación y Desarrollo",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Solo 3 de 4 productos lanzados. Acelerar MVP del 4° producto para Q4.",
+      "measurements": [
+        {
+          "id": "M-KPI-22-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 2.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 3.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 2.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 3.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 2.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 3.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 2.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 3.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 2.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-22-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 3,
+          "notes": "Solo 3 de 4 productos lanzados. Acelerar MVP del 4° producto para Q4.",
+          "responsible": "Andrés Castro"
+        }
+      ]
+    },
+    {
+      "id": "KPI-23",
+      "name": "Time-to-Market (lanzamiento)",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P2",
+      "unit": "semanas",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 15,
+      "target": 12,
+      "current": 15,
+      "direction": "inverso",
+      "pct": 80,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Andrés Castro",
+      "area": "Innovación y Desarrollo",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Time-to-market 25% por encima de meta. Adoptar metodología ágil en equipos de producto.",
+      "measurements": [
+        {
+          "id": "M-KPI-23-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 15.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 14.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 15.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 14.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 15.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 14.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 15.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 14.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 15.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-23-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 15,
+          "notes": "Time-to-market 25% por encima de meta. Adoptar metodología ágil en equipos de producto.",
+          "responsible": "Andrés Castro"
+        }
+      ]
+    },
+    {
+      "id": "KPI-24",
+      "name": "% Ingresos de Productos < 2 años",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 18.75,
+      "target": 25,
+      "current": 18,
+      "direction": "directo",
+      "pct": 72,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "Andrés Castro",
+      "area": "Innovación y Desarrollo",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Ingresos de nuevos productos al 72% de meta. Fortalecer validación de mercado pre-lanzamiento.",
+      "measurements": [
+        {
+          "id": "M-KPI-24-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 18.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 19.14,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 18.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 18.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 18.02,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 18.84,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 17.87,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 18.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 17.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-24-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 18,
+          "notes": "Ingresos de nuevos productos al 72% de meta. Fortalecer validación de mercado pre-lanzamiento.",
+          "responsible": "Andrés Castro"
+        }
+      ]
+    },
+    {
+      "id": "KPI-25",
+      "name": "On-Time Delivery de Proveedores (OTD)",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P3",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 71.25,
+      "target": 95,
+      "current": 92,
+      "direction": "directo",
+      "pct": 96.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "OTD al 96.8% de meta. Negociar SLAs más estrictos con los 3 proveedores críticos.",
+      "measurements": [
+        {
+          "id": "M-KPI-25-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 71.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 78.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 75.63,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 82.31,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 79.78,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 86.46,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 83.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 90.61,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 88.08,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-25-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 92,
+          "notes": "OTD al 96.8% de meta. Negociar SLAs más estrictos con los 3 proveedores críticos.",
+          "responsible": "Elena Morales"
+        }
+      ]
+    },
+    {
+      "id": "KPI-26",
+      "name": "N° Incidencias con Proveedores",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P3",
+      "unit": "#",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 6.25,
+      "target": 5,
+      "current": 8,
+      "direction": "inverso",
+      "pct": 62.5,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "8 incidencias vs. 5 meta. Implementar sistema de evaluación mensual de proveedores.",
+      "measurements": [
+        {
+          "id": "M-KPI-26-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 6.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 7.18,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 6.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 7.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 7.06,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 7.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 7.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 8.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-26-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 8,
+          "notes": "8 incidencias vs. 5 meta. Implementar sistema de evaluación mensual de proveedores.",
+          "responsible": "Elena Morales"
+        }
+      ]
+    },
+    {
+      "id": "KPI-27",
+      "name": "Costo de Inventario sobre Ventas",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P3",
+      "unit": "%",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 15,
+      "target": 12,
+      "current": 14.5,
+      "direction": "inverso",
+      "pct": 82.8,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Inventario al 20.8% sobre meta. Revisar política de stock mínimo y modelo de compras.",
+      "measurements": [
+        {
+          "id": "M-KPI-27-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 15.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 14.46,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 15.57,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 14.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 15.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 14.26,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 15.38,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 14.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 15.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-27-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 14.5,
+          "notes": "Inventario al 20.8% sobre meta. Revisar política de stock mínimo y modelo de compras.",
+          "responsible": "Elena Morales"
+        }
+      ]
+    },
+    {
+      "id": "KPI-28",
+      "name": "Horas de Capacitación por Empleado",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A1",
+      "unit": "hrs",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 30,
+      "target": 40,
+      "current": 35,
+      "direction": "directo",
+      "pct": 87.5,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "35 hrs vs. 40 hrs meta (87.5%). Agregar 2 sesiones de capacitación virtual mensual.",
+      "measurements": [
+        {
+          "id": "M-KPI-28-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 29.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 32.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 30.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 33.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 31.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 34.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 32.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 35.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 33.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-28-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 35,
+          "notes": "35 hrs vs. 40 hrs meta (87.5%). Agregar 2 sesiones de capacitación virtual mensual.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-29",
+      "name": "% Empleados con Plan de Desarrollo",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A1",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 60,
+      "target": 80,
+      "current": 72,
+      "direction": "directo",
+      "pct": 90,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "72% vs. 80% meta. Hacer obligatoria la capacitación para todos los equipos de ventas.",
+      "measurements": [
+        {
+          "id": "M-KPI-29-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 59.76,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 64.56,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 62.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 66.96,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 64.56,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 69.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 66.96,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 71.76,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 69.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-29-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 72,
+          "notes": "72% vs. 80% meta. Hacer obligatoria la capacitación para todos los equipos de ventas.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-30",
+      "name": "Índice de Competencias Clave Cubiertas",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A1",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 63.75,
+      "target": 85,
+      "current": 74,
+      "direction": "directo",
+      "pct": 87.1,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "74% vs. 85% meta. Identificar brechas de competencias y crear plan de cierre por área.",
+      "measurements": [
+        {
+          "id": "M-KPI-30-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 63.3,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 68.02,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 65.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 70.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 67.39,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 72.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 69.44,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 74.17,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 71.49,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-30-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 74,
+          "notes": "74% vs. 85% meta. Identificar brechas de competencias y crear plan de cierre por área.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-31",
+      "name": "Índice de Satisfacción del Empleado",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 56.25,
+      "target": 75,
+      "current": 68,
+      "direction": "directo",
+      "pct": 90.7,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Satisfacción al 90.7% de meta. Lanzar encuesta trimestral y plan de acción en 30 días.",
+      "measurements": [
+        {
+          "id": "M-KPI-31-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 56.06,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 60.64,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 58.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 62.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 60.77,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 65.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 63.11,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 67.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 65.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-31-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 68,
+          "notes": "Satisfacción al 90.7% de meta. Lanzar encuesta trimestral y plan de acción en 30 días.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-32",
+      "name": "Rotación de Personal (Turnover)",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A2",
+      "unit": "%",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 10,
+      "target": 8,
+      "current": 10,
+      "direction": "inverso",
+      "pct": 80,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Rotación 10% vs. 8% meta (KPI inverso — CRÍTICO). Revisar esquema de compensación y línea de carrera.",
+      "measurements": [
+        {
+          "id": "M-KPI-32-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 10.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 9.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 10.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 9.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 10.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 9.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 10.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 9.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 10.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-32-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 10,
+          "notes": "Rotación 10% vs. 8% meta (KPI inverso — CRÍTICO). Revisar esquema de compensación y línea de carrera.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-33",
+      "name": "% Empleados con Evaluación Desempeño",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A2",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 71.25,
+      "target": 95,
+      "current": 88,
+      "direction": "directo",
+      "pct": 92.6,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "88% vs. 95% meta. Completar evaluaciones de desempeño pendientes antes de fin de Q3.",
+      "measurements": [
+        {
+          "id": "M-KPI-33-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 71.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 77.24,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 74.52,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 80.59,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 77.86,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 83.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 81.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 87.29,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 84.56,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-33-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 88,
+          "notes": "88% vs. 95% meta. Completar evaluaciones de desempeño pendientes antes de fin de Q3.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-34",
+      "name": "Proyectos de Mejora Continua Activos",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A3",
+      "unit": "#",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 4.5,
+      "target": 6,
+      "current": 5,
+      "direction": "directo",
+      "pct": 83.3,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "5 de 6 proyectos activos (83.3%). Conformar equipo de mejora continua multidisciplinario.",
+      "measurements": [
+        {
+          "id": "M-KPI-34-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 4.45,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 4.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 4.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 4.85,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 4.65,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 4.95,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 4.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 5.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 4.85,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-34-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 5,
+          "notes": "5 de 6 proyectos activos (83.3%). Conformar equipo de mejora continua multidisciplinario.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-35",
+      "name": "% Presupuesto I+D sobre Ingresos",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A3",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 3.75,
+      "target": 5,
+      "current": 3.8,
+      "direction": "directo",
+      "pct": 76,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Andrés Castro",
+      "area": "Innovación y Desarrollo",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Presupuesto I+D al 76% de meta. Presentar propuesta de incremento para próximo presupuesto.",
+      "measurements": [
+        {
+          "id": "M-KPI-35-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 3.68,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 3.87,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 3.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 3.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 3.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 3.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 3.71,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 3.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 3.72,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Andrés Castro"
+        },
+        {
+          "id": "M-KPI-35-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 3.8,
+          "notes": "Presupuesto I+D al 76% de meta. Presentar propuesta de incremento para próximo presupuesto.",
+          "responsible": "Andrés Castro"
+        }
+      ]
+    },
+    {
+      "id": "KPI-36",
+      "name": "Ideas Implementadas de Empleados",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A3",
+      "unit": "#",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 18,
+      "target": 24,
+      "current": 16,
+      "direction": "directo",
+      "pct": 66.7,
+      "status": "CRÍTICO",
+      "statusKey": "bad",
+      "statusLabel": "❌ CRÍTICO",
+      "frequency": "Mensual",
+      "owner": "Diego Herrera",
+      "area": "Tecnología y TI",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "16 de 24 ideas implementadas (66.7%). Crear plataforma digital de gestión de ideas.",
+      "measurements": [
+        {
+          "id": "M-KPI-36-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 17.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 18.08,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 17.08,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 17.68,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 16.68,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 17.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 16.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 16.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 15.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Diego Herrera"
+        },
+        {
+          "id": "M-KPI-36-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 16,
+          "notes": "16 de 24 ideas implementadas (66.7%). Crear plataforma digital de gestión de ideas.",
+          "responsible": "Diego Herrera"
+        }
+      ]
+    },
+    {
+      "id": "KPI-37",
+      "name": "DSO – Días de Cobro Pendientes",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F4",
+      "unit": "días",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 56.25,
+      "target": 45,
+      "current": 48,
+      "direction": "inverso",
+      "pct": 93.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "DSO en 48 días vs meta de 45 días (93.8% cumplimiento). Reforzar seguimiento de cuentas por cobrar y facturación preventiva.",
+      "measurements": [
+        {
+          "id": "M-KPI-37-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 57.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 53.64,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 55.7,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 51.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 54.05,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 50.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 52.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 48.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 50.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-37-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 48,
+          "notes": "DSO en 48 días vs meta de 45 días (93.8% cumplimiento). Reforzar seguimiento de cuentas por cobrar y facturación preventiva.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-38",
+      "name": "Ratio de Liquidez Corriente",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F4",
+      "unit": "ratio",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 1.2,
+      "target": 1.6,
+      "current": 1.5,
+      "direction": "directo",
+      "pct": 93.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Liquidez corriente en 1.5 vs meta de 1.6 (93.8% cumplimiento). Mantiene solvencia operativa de corto plazo adecuada.",
+      "measurements": [
+        {
+          "id": "M-KPI-38-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 1.2,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 1.3,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 1.26,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 1.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 1.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 1.42,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 1.38,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 1.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 1.44,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-38-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 1.5,
+          "notes": "Liquidez corriente en 1.5 vs meta de 1.6 (93.8% cumplimiento). Mantiene solvencia operativa de corto plazo adecuada.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-39",
+      "name": "Margen Bruto en Servicios Cloud",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F5",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 24,
+      "target": 32,
+      "current": 29.5,
+      "direction": "directo",
+      "pct": 92.2,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Margen bruto en 29.5% frente a meta de 32% (92.2% cumplimiento). Optimizar consumo de instancias e infraestructura reservada.",
+      "measurements": [
+        {
+          "id": "M-KPI-39-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 23.96,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 25.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 25.06,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 27.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 26.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 28.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 27.26,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 29.29,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 28.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-39-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 29.5,
+          "notes": "Margen bruto en 29.5% frente a meta de 32% (92.2% cumplimiento). Optimizar consumo de instancias e infraestructura reservada.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-40",
+      "name": "LTV Corporativo (Valor del Cliente)",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F5",
+      "unit": "S/ k",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 63.75,
+      "target": 85,
+      "current": 82,
+      "direction": "directo",
+      "pct": 96.5,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "LTV en S/ 82k frente a meta de S/ 85k (96.5% cumplimiento). Incentivar contratos multianuales de servicios administrados.",
+      "measurements": [
+        {
+          "id": "M-KPI-40-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 63.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 69.86,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 67.58,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 73.51,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 71.23,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 77.16,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 74.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 80.81,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 78.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Patricia Ramos"
+        },
+        {
+          "id": "M-KPI-40-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 82,
+          "notes": "LTV en S/ 82k frente a meta de S/ 85k (96.5% cumplimiento). Incentivar contratos multianuales de servicios administrados.",
+          "responsible": "Patricia Ramos"
+        }
+      ]
+    },
+    {
+      "id": "KPI-41",
+      "name": "Adopción del Portal B2B",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C4",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 48.75,
+      "target": 65,
+      "current": 58,
+      "direction": "directo",
+      "pct": 89.2,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Adopción de portal en 58% vs meta de 65% (89.2% - En Riesgo). Capacitar a compradores corporativos y habilitar cotizador exprés.",
+      "measurements": [
+        {
+          "id": "M-KPI-41-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 48.52,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 52.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 50.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 54.19,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 52.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 56.04,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 54.07,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 57.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 55.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-41-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 58,
+          "notes": "Adopción de portal en 58% vs meta de 65% (89.2% - En Riesgo). Capacitar a compradores corporativos y habilitar cotizador exprés.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-42",
+      "name": "FRT – Tiempo de Respuesta en Cotizaciones",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C4",
+      "unit": "hrs",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 2.5,
+      "target": 2,
+      "current": 2.4,
+      "direction": "inverso",
+      "pct": 83.3,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Tiempo de primera respuesta en 2.4h vs meta de 2.0h (83.3% - En Riesgo). Estandarizar catálogo de precios y SLAs comerciales.",
+      "measurements": [
+        {
+          "id": "M-KPI-42-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 2.59,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 2.43,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 2.57,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 2.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 2.55,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 2.39,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 2.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 2.37,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 2.51,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-42-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 2.4,
+          "notes": "Tiempo de primera respuesta en 2.4h vs meta de 2.0h (83.3% - En Riesgo). Estandarizar catálogo de precios y SLAs comerciales.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-43",
+      "name": "Tasa de Renovación de Contratos Anuales",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C5",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 69,
+      "target": 92,
+      "current": 89,
+      "direction": "directo",
+      "pct": 96.7,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Renovación en 89% vs meta de 92% (96.7% cumplimiento). Implementar revisiones trimestrales de valor con cuentas Enterprise.",
+      "measurements": [
+        {
+          "id": "M-KPI-43-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 69.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 75.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 73.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 79.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 77.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 83.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 81.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 87.67,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 85.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-43-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 89,
+          "notes": "Renovación en 89% vs meta de 92% (96.7% cumplimiento). Implementar revisiones trimestrales de valor con cuentas Enterprise.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-44",
+      "name": "Venta Cruzada en Cuentas Top (Cross-Sell)",
+      "perspective": "clientes",
+      "objectiveId": "OBJ-C5",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 21,
+      "target": 28,
+      "current": 24,
+      "direction": "directo",
+      "pct": 85.7,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Venta cruzada en 24% vs meta de 28% (85.7% - En Riesgo). Ofrecer paquetes de ciberseguridad y servicios cloud complementarios.",
+      "measurements": [
+        {
+          "id": "M-KPI-44-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 20.82,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 22.32,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 21.42,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 22.92,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 22.02,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 23.52,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 22.62,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 24.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 23.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Jorge Salcedo"
+        },
+        {
+          "id": "M-KPI-44-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 24,
+          "notes": "Venta cruzada en 24% vs meta de 28% (85.7% - En Riesgo). Ofrecer paquetes de ciberseguridad y servicios cloud complementarios.",
+          "responsible": "Jorge Salcedo"
+        }
+      ]
+    },
+    {
+      "id": "KPI-45",
+      "name": "Disponibilidad de Servicios TI (Uptime SLA)",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P4",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 74.85,
+      "target": 99.8,
+      "current": 99.6,
+      "direction": "directo",
+      "pct": 99.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Uptime en 99.6% vs meta de 99.8% (99.8% cumplimiento). Alta estabilidad garantizada con arquitectura redundante.",
+      "measurements": [
+        {
+          "id": "M-KPI-45-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 75.33,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 82.79,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 80.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 87.74,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 85.23,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 92.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 90.18,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 97.64,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 95.13,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-45-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 99.6,
+          "notes": "Uptime en 99.6% vs meta de 99.8% (99.8% cumplimiento). Alta estabilidad garantizada con arquitectura redundante.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-46",
+      "name": "MTTR – Tiempo Promedio de Resolución de Incidentes TI",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P4",
+      "unit": "hrs",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 1.88,
+      "target": 1.5,
+      "current": 1.8,
+      "direction": "inverso",
+      "pct": 83.3,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "MTTR en 1.8h vs meta de 1.5h (83.3% - En Riesgo). Automatizar playbooks de diagnóstico y escalamiento en NOC/SOC.",
+      "measurements": [
+        {
+          "id": "M-KPI-46-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 1.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 1.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 1.93,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 1.81,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 1.91,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 1.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 1.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 1.78,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 1.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "María Valdivia"
+        },
+        {
+          "id": "M-KPI-46-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 1.8,
+          "notes": "MTTR en 1.8h vs meta de 1.5h (83.3% - En Riesgo). Automatizar playbooks de diagnóstico y escalamiento en NOC/SOC.",
+          "responsible": "María Valdivia"
+        }
+      ]
+    },
+    {
+      "id": "KPI-47",
+      "name": "Rotación de Inventario de Hardware",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P5",
+      "unit": "veces",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 4.5,
+      "target": 6,
+      "current": 5.2,
+      "direction": "directo",
+      "pct": 86.7,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Rotación en 5.2 vs meta de 6.0 veces/año (86.7% - En Riesgo). Mejorar la previsión de demanda en modelos de alta rotación.",
+      "measurements": [
+        {
+          "id": "M-KPI-47-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 4.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 4.8,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 4.61,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 4.94,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 4.75,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 5.08,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 4.89,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 5.22,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 5.03,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-47-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 5.2,
+          "notes": "Rotación en 5.2 vs meta de 6.0 veces/año (86.7% - En Riesgo). Mejorar la previsión de demanda en modelos de alta rotación.",
+          "responsible": "Elena Morales"
+        }
+      ]
+    },
+    {
+      "id": "KPI-48",
+      "name": "Tiempo de Gestión de Garantías (RMA)",
+      "perspective": "procesos",
+      "objectiveId": "OBJ-P5",
+      "unit": "días",
+      "formula": "(Meta / Real) × 100",
+      "baseline": 6.25,
+      "target": 5,
+      "current": 6.2,
+      "direction": "inverso",
+      "pct": 80.6,
+      "status": "EN RIESGO",
+      "statusKey": "warn",
+      "statusLabel": "⚠️ EN RIESGO",
+      "frequency": "Mensual",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Tiempo de RMA en 6.2 días frente a 5.0 días meta (80.6% - En Riesgo). Acordar canal prioritario con mayoristas oficiales.",
+      "measurements": [
+        {
+          "id": "M-KPI-48-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 6.49,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 6.12,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 6.48,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 6.11,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 6.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 6.1,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 6.46,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 6.09,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 6.45,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Elena Morales"
+        },
+        {
+          "id": "M-KPI-48-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 6.2,
+          "notes": "Tiempo de RMA en 6.2 días frente a 5.0 días meta (80.6% - En Riesgo). Acordar canal prioritario con mayoristas oficiales.",
+          "responsible": "Elena Morales"
+        }
+      ]
+    },
+    {
+      "id": "KPI-49",
+      "name": "Especialistas TI con Certificación Vigente",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A4",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 56.25,
+      "target": 75,
+      "current": 68,
+      "direction": "directo",
+      "pct": 90.7,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "68% certificados frente a meta de 75% (90.7% cumplimiento). Subsidiar vouchers de certificación en AWS, Azure y Fortinet.",
+      "measurements": [
+        {
+          "id": "M-KPI-49-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 56.06,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 60.64,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 58.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 62.99,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 60.77,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 65.34,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 63.11,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 67.69,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 65.47,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-49-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 68,
+          "notes": "68% certificados frente a meta de 75% (90.7% cumplimiento). Subsidiar vouchers de certificación en AWS, Azure y Fortinet.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-50",
+      "name": "Inversión Anual en Formación por Colaborador",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A4",
+      "unit": "S/",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 1350,
+      "target": 1800,
+      "current": 1650,
+      "direction": "directo",
+      "pct": 91.7,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Inversión en S/ 1,650 vs meta de S/ 1,800 (91.7% cumplimiento). Asignar remanente a laboratorios y bootcamps prácticos.",
+      "measurements": [
+        {
+          "id": "M-KPI-50-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 1347,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 1459.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 1407,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 1519.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 1467,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 1579.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 1527,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 1639.5,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 1587,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-50-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 1650,
+          "notes": "Inversión en S/ 1,650 vs meta de S/ 1,800 (91.7% cumplimiento). Asignar remanente a laboratorios y bootcamps prácticos.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-51",
+      "name": "Tasa de Retención de Talento Clave",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A5",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 71.25,
+      "target": 95,
+      "current": 91,
+      "direction": "directo",
+      "pct": 95.8,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Retención en 91% vs meta de 95% (95.8% cumplimiento). Fomentar planes de carrera técnica y flexibilidad híbrida.",
+      "measurements": [
+        {
+          "id": "M-KPI-51-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 71.41,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 77.93,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 75.36,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 81.88,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 79.31,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 85.83,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 83.26,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 89.78,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 87.21,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-51-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 91,
+          "notes": "Retención en 91% vs meta de 95% (95.8% cumplimiento). Fomentar planes de carrera técnica y flexibilidad híbrida.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    },
+    {
+      "id": "KPI-52",
+      "name": "Cobertura de Documentación en KMS (Base del Conocimiento)",
+      "perspective": "aprendizaje",
+      "objectiveId": "OBJ-A5",
+      "unit": "%",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 63.75,
+      "target": 85,
+      "current": 80,
+      "direction": "directo",
+      "pct": 94.1,
+      "status": "LOGRADO",
+      "statusKey": "good",
+      "statusLabel": "✅ LOGRADO",
+      "frequency": "Mensual",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "Cobertura en 80% vs meta de 85% (94.1% cumplimiento). Asegurar que toda arquitectura de proyectos quede documentada en el KMS.",
+      "measurements": [
+        {
+          "id": "M-KPI-52-2025-01",
+          "period": "2025-01",
+          "date": "2025-01-28",
+          "value": 63.77,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-02",
+          "period": "2025-02",
+          "date": "2025-02-28",
+          "value": 69.4,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-03",
+          "period": "2025-03",
+          "date": "2025-03-28",
+          "value": 67.03,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-04",
+          "period": "2025-04",
+          "date": "2025-04-28",
+          "value": 72.65,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-05",
+          "period": "2025-05",
+          "date": "2025-05-28",
+          "value": 70.28,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-06",
+          "period": "2025-06",
+          "date": "2025-06-28",
+          "value": 75.9,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-07",
+          "period": "2025-07",
+          "date": "2025-07-28",
+          "value": 73.53,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-08",
+          "period": "2025-08",
+          "date": "2025-08-28",
+          "value": 79.15,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-09",
+          "period": "2025-09",
+          "date": "2025-09-28",
+          "value": 76.78,
+          "notes": "Medición mensual de seguimiento",
+          "responsible": "Lucía Paredes"
+        },
+        {
+          "id": "M-KPI-52-2025-10",
+          "period": "2025-10",
+          "date": "2025-10-28",
+          "value": 80,
+          "notes": "Cobertura en 80% vs meta de 85% (94.1% cumplimiento). Asegurar que toda arquitectura de proyectos quede documentada en el KMS.",
+          "responsible": "Lucía Paredes"
+        }
+      ]
+    }
+  ],
+  "initiatives": [
+    {
+      "id": "INI-01",
+      "name": "Optimización de Estructura de Capital y Refinanciamiento",
+      "objectiveId": "OBJ-F1",
+      "kpiId": "KPI-01",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "start": "2025-01-15",
+      "end": "2025-11-30",
+      "budget": 65000,
+      "progress": 85,
+      "status": "En ejecución",
+      "description": "Revisar la deuda corporativa y reducir gastos financieros para proteger ROE y EBITDA."
+    },
+    {
+      "id": "INI-02",
+      "name": "Pipeline Comercial 2.0 y Campaña de Cross-Selling",
+      "objectiveId": "OBJ-F2",
+      "kpiId": "KPI-04",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "start": "2025-02-01",
+      "end": "2025-12-15",
+      "budget": 95000,
+      "progress": 75,
+      "status": "En ejecución",
+      "description": "Impulsar ventas YoY mediante programas de venta cruzada y captación en cuentas corporativas."
+    },
+    {
+      "id": "INI-03",
+      "name": "Plan de Eficiencia Operativa y Control de Costos (Opex)",
+      "objectiveId": "OBJ-F3",
+      "kpiId": "KPI-07",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "start": "2025-03-01",
+      "end": "2025-10-31",
+      "budget": 45000,
+      "progress": 90,
+      "status": "En ejecución",
+      "description": "Reducción de costos operativos y optimización del costo de adquisición de clientes."
+    },
+    {
+      "id": "INI-04",
+      "name": "Gestión Integral de Cobranza y Optimización de Capital de Trabajo",
+      "objectiveId": "OBJ-F4",
+      "kpiId": "KPI-37",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "start": "2025-02-01",
+      "end": "2025-11-30",
+      "budget": 35000,
+      "progress": 70,
+      "status": "En ejecución",
+      "description": "Reducir el DSO a 45 días mediante recordatorios automatizados y acuerdos de pronto pago."
+    },
+    {
+      "id": "INI-05",
+      "name": "Centro de Excelencia Cloud y Empaquetamiento de Servicios",
+      "objectiveId": "OBJ-F5",
+      "kpiId": "KPI-39",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "start": "2025-03-15",
+      "end": "2025-12-31",
+      "budget": 80000,
+      "progress": 60,
+      "status": "En ejecución",
+      "description": "Elevar margen bruto al 32% y fidelizar clientes corporativos con contratos de alto valor LTV."
+    },
+    {
+      "id": "INI-06",
+      "name": "Mesa de Ayuda Nivel 2 y Resolución Ágil de Reclamos",
+      "objectiveId": "OBJ-C1",
+      "kpiId": "KPI-12",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "start": "2025-02-15",
+      "end": "2025-09-30",
+      "budget": 40000,
+      "progress": 70,
+      "status": "En ejecución",
+      "description": "Disminuir el tiempo de resolución de quejas a menos de 2 días y elevar el NPS a 65 pts."
+    },
+    {
+      "id": "INI-07",
+      "name": "Portal de Autoservicio y Cotizaciones B2B Automatizadas",
+      "objectiveId": "OBJ-C4",
+      "kpiId": "KPI-41",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "start": "2025-04-01",
+      "end": "2025-11-30",
+      "budget": 50000,
+      "progress": 65,
+      "status": "En ejecución",
+      "description": "Elevar la adopción del portal al 65% y reducir el tiempo de primera respuesta a 2.0 horas."
+    },
+    {
+      "id": "INI-08",
+      "name": "Programa de Fidelización B2B y Gestión de Cuentas Clave",
+      "objectiveId": "OBJ-C5",
+      "kpiId": "KPI-43",
+      "owner": "Jorge Salcedo",
+      "area": "Gerencia Comercial",
+      "start": "2025-03-15",
+      "end": "2025-12-20",
+      "budget": 55000,
+      "progress": 60,
+      "status": "En ejecución",
+      "description": "Garantizar el 92% de renovación y acelerar la venta cruzada en el segmento Enterprise."
+    },
+    {
+      "id": "INI-09",
+      "name": "Estandarización y Control de Calidad en Almacén / Despacho",
+      "objectiveId": "OBJ-P1",
+      "kpiId": "KPI-20",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "start": "2025-01-10",
+      "end": "2025-08-31",
+      "budget": 50000,
+      "progress": 80,
+      "status": "En ejecución",
+      "description": "Reducir la tasa de defectos del 2.8% al 2.0% e implementar control de calidad por etapas."
+    },
+    {
+      "id": "INI-10",
+      "name": "Centro de Operaciones de Ciberseguridad (SOC) y Monitoreo SLA",
+      "objectiveId": "OBJ-P4",
+      "kpiId": "KPI-45",
+      "owner": "María Valdivia",
+      "area": "Operaciones y Calidad",
+      "start": "2025-02-01",
+      "end": "2025-12-15",
+      "budget": 90000,
+      "progress": 75,
+      "status": "En ejecución",
+      "description": "Garantizar 99.8% de disponibilidad y reducir MTTR ante incidentes a menos de 1.5 horas."
+    },
+    {
+      "id": "INI-11",
+      "name": "Modernización Logística JIT y Gestión Ágil de Garantías RMA",
+      "objectiveId": "OBJ-P5",
+      "kpiId": "KPI-48",
+      "owner": "Elena Morales",
+      "area": "Logística y Compras",
+      "start": "2025-03-01",
+      "end": "2025-10-31",
+      "budget": 40000,
+      "progress": 55,
+      "status": "En ejecución",
+      "description": "Elevar la rotación a 6.0 veces y acelerar el retorno de garantías RMA con fabricantes a 5 días."
+    },
+    {
+      "id": "INI-12",
+      "name": "Academia Corporativa TechPeru y Certificaciones Oficiales",
+      "objectiveId": "OBJ-A4",
+      "kpiId": "KPI-49",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "start": "2025-01-15",
+      "end": "2025-11-30",
+      "budget": 70000,
+      "progress": 80,
+      "status": "En ejecución",
+      "description": "Alcanzar 75% de ingenieros certificados e invertir S/ 1,800 por colaborador."
+    },
+    {
+      "id": "INI-13",
+      "name": "Gestión del Conocimiento KMS y Retención del Talento Crítico",
+      "objectiveId": "OBJ-A5",
+      "kpiId": "KPI-51",
+      "owner": "Lucía Paredes",
+      "area": "Gestión del Talento Humano",
+      "start": "2025-02-15",
+      "end": "2025-12-15",
+      "budget": 45000,
+      "progress": 65,
+      "status": "En ejecución",
+      "description": "Fidelizar el 95% del talento clave y asegurar cobertura del 85% de procesos en el KMS."
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Carlos Mendoza",
+      "email": "admin@demo.com",
+      "role": "Administrador",
+      "area": "Gerencia General",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u2",
+      "name": "Patricia Ramos",
+      "email": "gerente@demo.com",
+      "role": "Gerente",
+      "area": "Finanzas y Contabilidad",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u3",
+      "name": "Jorge Salcedo",
+      "email": "jorge.salcedo@techperu.com",
+      "role": "Gerente",
+      "area": "Gerencia Comercial",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u4",
+      "name": "María Valdivia",
+      "email": "responsable@demo.com",
+      "role": "Responsable de indicadores",
+      "area": "Operaciones y Calidad",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u5",
+      "name": "Andrés Castro",
+      "email": "andres.castro@techperu.com",
+      "role": "Gerente",
+      "area": "Innovación y Desarrollo",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u6",
+      "name": "Elena Morales",
+      "email": "elena.morales@techperu.com",
+      "role": "Responsable de indicadores",
+      "area": "Logística y Compras",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u7",
+      "name": "Lucía Paredes",
+      "email": "lucia.paredes@techperu.com",
+      "role": "Gerente",
+      "area": "Gestión del Talento Humano",
+      "password": "BSC2026!"
+    },
+    {
+      "id": "u8",
+      "name": "Diego Herrera",
+      "email": "diego.herrera@techperu.com",
+      "role": "Responsable de indicadores",
+      "area": "Tecnología y TI",
+      "password": "BSC2026!"
+    }
+  ],
+  "audit": [
+    {
+      "id": "AUD-22058889",
+      "date": "2026-10-27T17:27:38.889Z",
+      "user": "Patricia Ramos",
+      "action": "Edición de KPI",
+      "entity": "KPI-01 · ROE – Retorno sobre Patrimonio",
+      "detail": "Parámetros actualizados para KPI-01"
+    },
+    {
+      "id": "AUD-22041977",
+      "date": "2026-10-27T17:27:21.977Z",
+      "user": "Patricia Ramos",
+      "action": "Edición de KPI",
+      "entity": "KPI-01 · ROE – Retorno sobre Patrimonio",
+      "detail": "Parámetros actualizados para KPI-01"
+    },
+    {
+      "id": "AUD-001",
+      "date": "2026-10-27T17:18:35.083Z",
+      "user": "Sistema ETL",
+      "action": "Expansión Oficial",
+      "entity": "TechPeru SAC 2025",
+      "detail": "Se cargaron exitosamente los 20 Objetivos Estratégicos (5 por perspectiva) y 52 KPIs oficiales."
+    }
+  ]
+}
