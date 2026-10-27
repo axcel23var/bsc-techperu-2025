@@ -5,34 +5,44 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* --- 1. Variables de Diseño y Paleta Corporativa --- */
+/* --- 1. Variables de Diseño y Paleta Corporativa (Amber & Obsidian) --- */
 :root {
-  /* Fondo general y superficies */
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --surface-hover: #f1f5f9;
-  --line: #e2e8f0;
-  --line-subtle: #f1f5f9;
+  /* Paleta Principal Ámbar / Dorado Ejecutivo */
+  --primary: #d97706;
+  --primary-hover: #b45309;
+  --primary-light: #fef3c7;
+  --primary-glow: rgba(217, 119, 6, 0.25);
 
-  /* Sidebar Slate 900 Enterprise */
+  /* Superficies y Fondo */
+  --bg-app: #f9fafb;
+  --bg: #f9fafb;
+  --surface: #ffffff;
+  --surface-hover: #f9fafb;
+  --border-color: #e5e7eb;
+  --line: #e5e7eb;
+  --line-subtle: #f3f4f6;
+
+  /* Sidebar Slate 900 / Obsidian Enterprise */
   --sidebar-gradient: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
   --sidebar-text: #94a3b8;
   --sidebar-text-bright: #f8fafc;
-  --sidebar-accent: #0ea5e9;
-  --sidebar-accent-active: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  --sidebar-accent: #f59e0b;
+  --sidebar-accent-active: rgba(245, 158, 11, 0.12);
   --sidebar-border: rgba(255, 255, 255, 0.08);
 
   /* Botones e Interactividad Primaria */
-  --btn-primary-gradient: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-  --btn-primary-hover: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  --btn-primary-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  --btn-primary-hover: linear-gradient(135deg, #d97706 0%, #b45309 100%);
 
   /* Tipografía */
-  --ink: #0f172a;
-  --ink-secondary: #334155;
-  --muted: #64748b;
-  --muted-light: #94a3b8;
+  --text-main: #111827;
+  --ink: #111827;
+  --ink-secondary: #374151;
+  --text-muted: #6b7280;
+  --muted: #6b7280;
+  --muted-light: #9ca3af;
 
-  /* Semáforos Modernos (Executive Palette) */
+  /* Semáforos Oficiales (Regla BSC conservada intacta) */
   --green-bg: #ecfdf5;
   --green-text: #047857;
   --green-border: #a7f3d0;
@@ -53,7 +63,7 @@
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
   --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
-  --shadow-hover: 0 8px 16px -2px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 8px 16px -2px rgba(217, 119, 6, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
 
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -85,7 +95,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid #f59e0b;
   outline-offset: 2px;
 }
 
@@ -158,13 +168,13 @@ textarea:focus-visible {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
   display: grid;
   place-items: center;
   color: #ffffff;
   font-size: 20px;
   font-weight: 800;
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.35);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
 }
 
 .brand-login {
@@ -227,8 +237,8 @@ textarea:focus-visible {
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-color: #0ea5e9;
-  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
 }
 
 .demo-note {
@@ -248,7 +258,7 @@ textarea:focus-visible {
 }
 
 .login-art {
-  background: linear-gradient(145deg, #0f172a 0%, #1e293b 40%, #0369a1 100%);
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 45%, #78350f 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -264,7 +274,7 @@ textarea:focus-visible {
 }
 
 .art-content .eyebrow {
-  color: #38bdf8;
+  color: #fbbf24;
   font-weight: 700;
 }
 
@@ -322,7 +332,7 @@ textarea:focus-visible {
   height: 480px;
   right: -160px;
   top: 10px;
-  border-color: rgba(56, 189, 248, 0.15);
+  border-color: rgba(245, 158, 11, 0.2);
 }
 
 /* --- 4. Shell y Sidebar Slate 900 Enterprise --- */
@@ -360,14 +370,14 @@ textarea:focus-visible {
 .org-icon {
   width: 30px;
   height: 30px;
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
   color: #ffffff;
   border-radius: 8px;
   display: grid;
   place-items: center;
   font-weight: 800;
   font-size: 13px;
-  box-shadow: 0 2px 6px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.3);
 }
 
 .org-switch strong,
@@ -409,6 +419,7 @@ nav {
 
 .nav-item {
   border: 0;
+  border-left: 3px solid transparent;
   width: 100%;
   background: transparent;
   color: #94a3b8;
@@ -417,24 +428,30 @@ nav {
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
   margin: 2px 0;
   font-weight: 500;
   font-size: 12px;
-  transition: all 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-item:hover {
   background: rgba(255, 255, 255, 0.06);
   color: #f8fafc;
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 .nav-item.active {
-  background: var(--sidebar-accent-active);
-  color: #ffffff;
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  border-left: 3px solid #f59e0b;
+  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.15);
+}
+
+.nav-item.active .nav-icon {
+  color: #f59e0b;
+  opacity: 1;
 }
 
 .nav-icon {
@@ -442,6 +459,7 @@ nav {
   text-align: center;
   font-size: 16px;
   opacity: 0.9;
+  transition: color 0.15s ease;
 }
 
 .sidebar-bottom {
@@ -466,8 +484,8 @@ nav {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: rgba(14, 165, 233, 0.15);
-  color: #38bdf8;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
   font-weight: 700;
   font-size: 12px;
 }
@@ -502,13 +520,13 @@ nav {
   height: 32px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  background: linear-gradient(135deg, #f59e0b, #d97706);
   color: #ffffff;
   border-radius: 50%;
   font-weight: 700;
   font-size: 11px;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
 }
 
 .user-meta {
@@ -769,30 +787,32 @@ nav {
 }
 
 .btn.primary {
-  background: var(--btn-primary-gradient);
-  border: 1px solid #1d4ed8;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border: 1px solid #b45309;
   color: #ffffff;
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25), 0 1px 2px rgba(37, 99, 235, 0.15);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.3);
 }
 
 .btn.primary:hover {
-  background: var(--btn-primary-hover);
-  border-color: #1e40af;
+  background: linear-gradient(135deg, #d97706, #b45309);
+  border-color: #92400e;
   color: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+  filter: brightness(1.08);
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
 }
 
 .btn.soft {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border-color: #bfdbfe;
+  background: #fef3c7;
+  color: #b45309;
+  border-color: #fde68a;
 }
 
 .btn.soft:hover {
-  background: #dbeafe;
-  color: #1e40af;
-  border-color: #93c5fd;
+  background: #fde68a;
+  color: #92400e;
+  border-color: #f59e0b;
 }
 
 .btn.danger {
@@ -867,10 +887,10 @@ nav {
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #fef3c7;
+  color: #d97706;
   font-size: 17px;
-  box-shadow: inset 0 0 0 1px #dbeafe;
+  box-shadow: inset 0 0 0 1px #fde68a;
 }
 
 .metric-value {
@@ -935,7 +955,7 @@ nav {
 .panel-action {
   border: 0;
   background: transparent;
-  color: #2563eb;
+  color: #d97706;
   font-size: 11px;
   font-weight: 700;
   padding: 4px 6px;
@@ -944,8 +964,8 @@ nav {
 }
 
 .panel-action:hover {
-  background: #eff6ff;
-  color: #1d4ed8;
+  background: #fef3c7;
+  color: #b45309;
 }
 
 .dashboard-grid {
@@ -1000,7 +1020,7 @@ nav {
 .progress-fill {
   height: 100%;
   border-radius: 20px;
-  background: linear-gradient(90deg, #3b82f6, #0ea5e9);
+  background: linear-gradient(90deg, #f59e0b, #d97706);
   transition: width 0.4s ease;
 }
 
@@ -1165,15 +1185,15 @@ tbody tr:hover {
 }
 
 .status.blue {
-  background: #eff6ff;
-  color: #1d4ed8;
-  border: 1px solid #bfdbfe;
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
 }
 
 .code {
   font-size: 10.5px;
   font-weight: 700;
-  color: #2563eb;
+  color: #d97706;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -1185,7 +1205,7 @@ tbody tr:hover {
 .text-action {
   border: 0;
   background: transparent;
-  color: #2563eb;
+  color: #d97706;
   font-size: 11px;
   font-weight: 700;
   padding: 3px 6px;
@@ -1194,8 +1214,8 @@ tbody tr:hover {
 }
 
 .text-action:hover {
-  background: #eff6ff;
-  color: #1d4ed8;
+  background: #fef3c7;
+  color: #b45309;
 }
 
 .empty-state {
@@ -1259,11 +1279,11 @@ tbody tr:hover {
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #fef3c7;
+  color: #d97706;
   flex-shrink: 0;
   font-weight: 700;
-  box-shadow: inset 0 0 0 1px #dbeafe;
+  box-shadow: inset 0 0 0 1px #fde68a;
 }
 
 .objective-card h3 {
@@ -1343,10 +1363,10 @@ tbody tr:hover {
 }
 
 .map-objective {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #e5e7eb;
   background: #ffffff;
-  color: #0f172a;
-  border-radius: 12px;
+  color: #111827;
+  border-radius: 10px;
   padding: 14px 12px;
   min-width: 0;
   max-width: none;
@@ -1358,7 +1378,7 @@ tbody tr:hover {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
               box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
               border-color 0.2s ease, 
@@ -1367,9 +1387,9 @@ tbody tr:hover {
 
 .map-objective:hover {
   transform: translateY(-2px);
-  border-color: #93c5fd;
-  box-shadow: var(--shadow-hover);
-  background: #fafcff;
+  border-color: #fcd34d;
+  box-shadow: 0 6px 16px -2px rgba(217, 119, 6, 0.12), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  background: #fffdfa;
 }
 
 .map-objective strong {
@@ -1379,17 +1399,17 @@ tbody tr:hover {
   line-height: 1.4;
   margin-bottom: 8px;
   padding-right: 18px; /* espacio para el indicador de semáforo con brillo */
-  color: #0f172a;
+  color: #111827;
 }
 
 .map-objective small {
   display: block;
   font-size: 10px;
-  color: #64748b;
+  color: #6b7280;
   font-weight: 500;
   margin-top: auto;
   padding-top: 6px;
-  border-top: 1px dashed #f1f5f9;
+  border-top: 1px dashed #e5e7eb;
 }
 
 /* Punto indicador de semáforo con brillo sutil */
@@ -1551,11 +1571,11 @@ tbody tr:hover {
   border-radius: 10px;
   display: grid;
   place-items: center;
-  background: #eff6ff;
-  color: #2563eb;
+  background: #fef3c7;
+  color: #d97706;
   margin-bottom: 14px;
   font-size: 18px;
-  box-shadow: inset 0 0 0 1px #dbeafe;
+  box-shadow: inset 0 0 0 1px #fde68a;
 }
 
 .report-card h3 {
@@ -1732,7 +1752,7 @@ tbody tr:hover {
 }
 
 .inline-link {
-  color: #2563eb;
+  color: #d97706;
   font-weight: 600;
   cursor: pointer;
   border: 0;
@@ -1741,6 +1761,7 @@ tbody tr:hover {
 }
 
 .inline-link:hover {
+  color: #b45309;
   text-decoration: underline;
 }
 
