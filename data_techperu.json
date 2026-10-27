@@ -269,6 +269,17 @@
       "weight": 20,
       "status": "Activo",
       "created": "2025-01-05"
+    },
+    {
+      "id": "OBJ-F6",
+      "name": "de prueba",
+      "perspective": "financiera",
+      "description": "",
+      "owner": "Patricia Ramos",
+      "priority": "Alta",
+      "weight": 20,
+      "status": "Activo",
+      "created": "2026-10-27"
     }
   ],
   "kpis": [
@@ -5731,13 +5742,37 @@
           "responsible": "Lucía Paredes"
         }
       ]
+    },
+    {
+      "id": "KPI-53",
+      "name": "adwadw",
+      "perspective": "financiera",
+      "objectiveId": "OBJ-F6",
+      "unit": "%10",
+      "formula": "(Real / Meta) × 100",
+      "baseline": 0,
+      "target": 100,
+      "current": null,
+      "direction": "directo",
+      "pct": null,
+      "status": "SIN DATOS",
+      "statusKey": "neutral",
+      "statusLabel": "Sin datos",
+      "frequency": "Mensual",
+      "owner": "Patricia Ramos",
+      "area": "Finanzas y Contabilidad",
+      "weight": 1,
+      "alertAt": 75,
+      "criticalAt": 75,
+      "analysis": "awdawdwa",
+      "measurements": []
     }
   ],
   "initiatives": [
     {
       "id": "INI-01",
       "name": "Implementación de Portal B2B de Autogestión de Clientes",
-      "objectiveId": "OBJ-C4",
+      "objectiveId": "OBJ-F1",
       "leader": "Jorge Salcedo",
       "owner": "Jorge Salcedo",
       "area": "Gerencia Comercial",
@@ -5813,6 +5848,22 @@
       "start": "2025-03-01",
       "end": "2025-10-31",
       "description": "Plataforma de seguimiento y trazabilidad ágil para devoluciones y reclamos con fabricantes."
+    },
+    {
+      "id": "INI-06",
+      "name": "implementacion de odoo",
+      "objectiveId": "OBJ-F1",
+      "leader": "Jorge Salcedo",
+      "owner": "Jorge Salcedo",
+      "area": "Finanzas y Contabilidad",
+      "budget": 45100,
+      "progress": 0,
+      "status": "Completado",
+      "startDate": "2026-10-27",
+      "endDate": "2025-12-31",
+      "start": "2026-10-27",
+      "end": "2025-12-31",
+      "description": "Iniciativa estratégica para OBJ-F1 en TechPeru SAC."
     }
   ],
   "users": [
@@ -5883,6 +5934,94 @@
   ],
   "audit": [
     {
+      "id": "AUD-35006913",
+      "date": "2026-10-27T21:03:26.913Z",
+      "user": "Patricia Ramos",
+      "action": "Asociación de Iniciativas",
+      "entity": "OBJ-F1 · Incrementar la Rentabilidad",
+      "detail": "Se asociaron 1 iniciativa(s) (INI-01) al objetivo OBJ-F1"
+    },
+    {
+      "id": "AUD-34996560",
+      "date": "2026-10-27T21:03:16.560Z",
+      "user": "Patricia Ramos",
+      "action": "Asociación de KPIs",
+      "entity": "OBJ-F1 · Incrementar la Rentabilidad",
+      "detail": "Se asociaron 1 KPI(s) (KPI-01) al objetivo OBJ-F1"
+    },
+    {
+      "id": "AUD-34641129",
+      "date": "2026-10-27T20:57:21.129Z",
+      "user": "Patricia Ramos",
+      "action": "Edición de Objetivo",
+      "entity": "OBJ-F6 · de prueba",
+      "detail": "Objetivo OBJ-F6 en perspectiva financiera"
+    },
+    {
+      "id": "AUD-34494610",
+      "date": "2026-10-27T20:54:54.610Z",
+      "user": "Patricia Ramos",
+      "action": "Edición de KPI",
+      "entity": "KPI-53 · adwadw",
+      "detail": "Parámetros actualizados para KPI-53"
+    },
+    {
+      "id": "AUD-34072985",
+      "date": "2026-10-27T20:47:52.985Z",
+      "user": "Jorge Salcedo",
+      "action": "Actualización de Iniciativa",
+      "entity": "INI-06 · implementacion de odoo",
+      "detail": "Estado: Completado, Avance: 0%, Presupuesto: S/ 45100"
+    },
+    {
+      "id": "AUD-34056247",
+      "date": "2026-10-27T20:47:36.247Z",
+      "user": "Jorge Salcedo",
+      "action": "Actualización de Iniciativa",
+      "entity": "INI-06 · implementacion de odoo",
+      "detail": "Estado: Completado, Avance: 0%, Presupuesto: S/ 45000"
+    },
+    {
+      "id": "AUD-34048590",
+      "date": "2026-10-27T20:47:28.590Z",
+      "user": "Jorge Salcedo",
+      "action": "Actualización de Iniciativa",
+      "entity": "INI-06 · implementacion de odoo",
+      "detail": "Estado: Planificada, Avance: 0%, Presupuesto: S/ 45000"
+    },
+    {
+      "id": "AUD-34018559",
+      "date": "2026-10-27T20:46:58.559Z",
+      "user": "Jorge Salcedo",
+      "action": "Creación de Iniciativa",
+      "entity": "INI-06 · implementacion de odoo",
+      "detail": "Iniciativa asignada a OBJ-F1 con presupuesto S/ 45000"
+    },
+    {
+      "id": "AUD-33847166",
+      "date": "2026-10-27T20:44:07.166Z",
+      "user": "Patricia Ramos",
+      "action": "Edición de KPI",
+      "entity": "KPI-53 · adwadw",
+      "detail": "Parámetros actualizados para KPI-53"
+    },
+    {
+      "id": "AUD-33809475",
+      "date": "2026-10-27T20:43:29.475Z",
+      "user": "Patricia Ramos",
+      "action": "Creación de KPI",
+      "entity": "KPI-53 · adwadw",
+      "detail": "Parámetros actualizados para KPI-53"
+    },
+    {
+      "id": "AUD-33697972",
+      "date": "2026-10-27T20:41:37.972Z",
+      "user": "Patricia Ramos",
+      "action": "Creación de Objetivo",
+      "entity": "OBJ-F6 · awdawd",
+      "detail": "Objetivo OBJ-F6 en perspectiva financiera"
+    },
+    {
       "id": "AUD-28627492",
       "date": "2026-10-27T19:17:07.492Z",
       "user": "Mar�a Valdivia",
@@ -5927,7 +6066,7 @@
     {
       "id": "INI-01",
       "name": "Implementación de Portal B2B de Autogestión de Clientes",
-      "objectiveId": "OBJ-C4",
+      "objectiveId": "OBJ-F1",
       "leader": "Jorge Salcedo",
       "owner": "Jorge Salcedo",
       "area": "Gerencia Comercial",
@@ -6003,6 +6142,22 @@
       "start": "2025-03-01",
       "end": "2025-10-31",
       "description": "Plataforma de seguimiento y trazabilidad ágil para devoluciones y reclamos con fabricantes."
+    },
+    {
+      "id": "INI-06",
+      "name": "implementacion de odoo",
+      "objectiveId": "OBJ-F1",
+      "leader": "Jorge Salcedo",
+      "owner": "Jorge Salcedo",
+      "area": "Finanzas y Contabilidad",
+      "budget": 45100,
+      "progress": 0,
+      "status": "Completado",
+      "startDate": "2026-10-27",
+      "endDate": "2025-12-31",
+      "start": "2026-10-27",
+      "end": "2025-12-31",
+      "description": "Iniciativa estratégica para OBJ-F1 en TechPeru SAC."
     }
   ]
 }

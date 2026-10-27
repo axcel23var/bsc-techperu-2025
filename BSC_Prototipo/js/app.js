@@ -87,6 +87,22 @@ const API = {
     const res = await fetch('/api/audit');
     if (!res.ok) return [];
     return res.json();
+  },
+  async asociarKpis(objectiveId, kpiIds) {
+    const res = await fetch(`/api/objetivos/${encodeURIComponent(objectiveId)}/asociar-kpis`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kpiIds })
+    });
+    return res.json();
+  },
+  async asociarIniciativas(objectiveId, initiativeIds) {
+    const res = await fetch(`/api/objetivos/${encodeURIComponent(objectiveId)}/asociar-iniciativas`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ initiativeIds })
+    });
+    return res.json();
   }
 };
 
@@ -107,13 +123,15 @@ let state = {
   initiatives: [],
   users: [],
   audit: [],
-  dashboard: null
+  dashboard: null,
+  currentObjectiveDetailId: null
 };
 
 let currentUser = null;
 let currentPage = "dashboard";
 let charts = {};
 let modalSubmit = null;
+let subModalSubmit = null;
 
 function updatePeriodBadges() {
   const p = state.periodo || "2025";
@@ -1210,7 +1228,15 @@ async function handleAction(action, id, data = {}) {
     case "edit-objective": openObjectiveForm(id); break;
     case "delete-objective": confirmDelete("objetivo", id); break;
     case "objective-detail": showObjectiveDetail(id); break;
-    case "new-kpi": openKpiForm(); break;
+    case "asociar-kpi": openAsociarKpiModal(id || state.currentObjectiveDetailId); break;
+    case "asociar-iniciativa": openAsociarIniciativaModal(id || state.currentObjectiveDetailId); break;
+    case "new-kpi":
+      if (state.currentObjectiveDetailId) {
+        openAsociarKpiModal(state.currentObjectiveDetailId);
+      } else {
+        openKpiForm();
+      }
+      break;
     case "edit-kpi": openKpiForm(id); break;
     case "kpi-detail": showKpiDetail(id); break;
     case "measure-kpi": openMeasurementForm(null, id); break;
@@ -1260,18 +1286,45 @@ function showModal(title, body, submitLabel = "Guardar", submitFn = null, eyebro
   $("#modalTitle").textContent = title;
   $("#modalEyebrow").textContent = eyebrow;
   $("#modalBody").innerHTML = body;
-  $("#modalFooter").innerHTML = `<button class="btn" type="button" id="modalCancel">Cancelar</button><button class="btn primary" type="button" id="modalSubmit">${submitLabel}</button>`;
+  
+  if (submitLabel === "Cerrar" || !submitFn) {
+    $("#modalFooter").innerHTML = `<button class="btn primary" type="button" id="modalCloseAction">Cerrar</button>`;
+  } else {
+    $("#modalFooter").innerHTML = `<button class="btn" type="button" id="modalCancel">Cancelar</button><button class="btn primary" type="button" id="modalSubmit">${submitLabel}</button>`;
+  }
+  
   $("#modalLayer").classList.remove("hidden");
   modalSubmit = submitFn;
   $("#modalClose").onclick = closeModal;
-  $("#modalCancel").onclick = closeModal;
-  $("#modalSubmit").onclick = () => { if (modalSubmit) modalSubmit(); };
+  if ($("#modalCancel")) $("#modalCancel").onclick = closeModal;
+  if ($("#modalCloseAction")) $("#modalCloseAction").onclick = closeModal;
+  if ($("#modalSubmit")) $("#modalSubmit").onclick = () => { if (modalSubmit) modalSubmit(); };
   $("#modalLayer").onclick = e => { if (e.target === $("#modalLayer")) closeModal(); };
 }
 
 function closeModal() {
   $("#modalLayer").classList.add("hidden");
   modalSubmit = null;
+  state.currentObjectiveDetailId = null;
+  closeSubModal();
+}
+
+function showSubModal(title, body, submitLabel = "Confirmar", submitFn = null, eyebrow = "ASOCIACIÓN") {
+  $("#subModalTitle").textContent = title;
+  $("#subModalEyebrow").textContent = eyebrow;
+  $("#subModalBody").innerHTML = body;
+  $("#subModalFooter").innerHTML = `<button class="btn" type="button" id="subModalCancel">Cancelar</button><button class="btn primary" type="button" id="subModalSubmit">${submitLabel}</button>`;
+  $("#subModalLayer").classList.remove("hidden");
+  subModalSubmit = submitFn;
+  $("#subModalClose").onclick = closeSubModal;
+  if ($("#subModalCancel")) $("#subModalCancel").onclick = closeSubModal;
+  if ($("#subModalSubmit")) $("#subModalSubmit").onclick = () => { if (subModalSubmit) subModalSubmit(); };
+  $("#subModalLayer").onclick = e => { if (e.target === $("#subModalLayer")) closeSubModal(); };
+}
+
+function closeSubModal() {
+  $("#subModalLayer").classList.add("hidden");
+  subModalSubmit = null;
 }
 
 function selectField(label, name, opts, required = true) {
@@ -1595,11 +1648,354 @@ function confirmDelete(type, id) {
   }
 }
 
+function openAsociarKpiModal(objectiveId) {
+  const obj = state.objectives.find(o => o.id === objectiveId);
+  if (!obj) {
+    toast("No se encontró el objetivo especificado.", "error");
+    return;
+  }
+
+  const availableKpis = state.kpis.filter(k => k.objectiveId !== objectiveId);
+
+  if (availableKpis.length === 0) {
+    showSubModal(
+      `Asociar KPIs a ${obj.id}`,
+      `<div class="info-box">
+        <strong>Todos los KPIs ya están asignados a este objetivo.</strong>
+        <p>No hay indicadores disponibles para asociar o reasignar. Si necesitas medir otro aspecto estratégico, puedes crear un nuevo indicador.</p>
+      </div>`,
+      "Crear Nuevo KPI",
+      () => {
+        closeSubModal();
+        openKpiForm();
+      },
+      "DISPONIBILIDAD DE KPIS"
+    );
+    return;
+  }
+
+  const renderList = (filterText = "") => {
+    const q = filterText.toLowerCase().trim();
+    const filtered = availableKpis.filter(k =>
+      !q || `${k.id} ${k.name} ${k.perspective} ${k.owner || ""} ${k.unit}`.toLowerCase().includes(q)
+    );
+
+    if (filtered.length === 0) {
+      return `<p class="muted" style="padding:24px;text-align:center">No se encontraron KPIs que coincidan con "${escapeHtml(filterText)}".</p>`;
+    }
+
+    return filtered.map(k => {
+      const currentObj = state.objectives.find(o => o.id === k.objectiveId);
+      const persp = perspectives[k.perspective] || { label: k.perspective, color: "#d97706" };
+      return `<label class="assoc-item" data-kpi-id="${k.id}">
+        <input type="checkbox" class="kpi-assoc-cb" value="${k.id}">
+        <div class="assoc-item-content">
+          <div class="assoc-item-title">
+            <span class="assoc-badge" style="background:${persp.color}18;color:${persp.color}">${escapeHtml(k.id)}</span>
+            <span>${escapeHtml(k.name)}</span>
+          </div>
+          <div class="assoc-item-sub">
+            Perspectiva: <strong>${escapeHtml(persp.label)}</strong> · Responsable: ${escapeHtml(k.owner || "No asignado")}<br>
+            ${currentObj ? `Actualmente vinculado a: <em>${escapeHtml(currentObj.id + " · " + currentObj.name)}</em>` : `<span style="color:#d97706;font-weight:600">Sin objetivo asignado</span>`}
+          </div>
+          <div class="assoc-item-target">
+            Meta Anual: ${fmt(k.target)} ${escapeHtml(k.unit)} · Sentido: ${k.direction === "inverso" || k.direction === "menor" ? "Inverso ↓" : "Directo ↑"}
+          </div>
+        </div>
+      </label>`;
+    }).join("");
+  };
+
+  const body = `<div class="assoc-container">
+    <div class="info-box" style="margin:0">
+      Objetivo destino: <strong>${escapeHtml(obj.id)}: ${escapeHtml(obj.name)}</strong> (${escapeHtml(perspectiveLabel(obj.perspective))})<br>
+      <small class="muted">Selecciona los indicadores estratégicos que deseas vincular a este objetivo para calcular su promedio de cumplimiento.</small>
+    </div>
+    <input type="text" id="kpiAssocSearch" class="assoc-search-box" placeholder="🔍 Buscar por código (KPI-XX), nombre, responsable...">
+    <div class="assoc-header">
+      <label><input type="checkbox" id="selectAllKpis"> Seleccionar todos los visibles</label>
+      <span><span id="selectedKpiCount" class="assoc-counter">0</span> de ${availableKpis.length} disponibles</span>
+    </div>
+    <div id="kpiAssocList" class="assoc-list">
+      ${renderList()}
+    </div>
+  </div>`;
+
+  showSubModal(
+    `Asociar KPIs al Objetivo ${obj.id}`,
+    body,
+    "Confirmar Asociación (0)",
+    async () => {
+      const checked = [...document.querySelectorAll(".kpi-assoc-cb:checked")].map(cb => cb.value);
+      if (checked.length === 0) {
+        toast("Selecciona al menos un KPI para asociar.", "error");
+        return;
+      }
+
+      const submitBtn = $("#subModalSubmit");
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Guardando en Servidor...";
+      }
+
+      try {
+        let res;
+        try {
+          res = await API.asociarKpis(obj.id, checked);
+        } catch (netErr) {
+          console.warn("Fallo de red en asociar-kpis, aplicando actualización local:", netErr);
+        }
+
+        // Persistir en el estado local de memoria
+        state.kpis.forEach(k => {
+          if (checked.includes(k.id)) {
+            k.objectiveId = obj.id;
+            if (obj.perspective) k.perspective = obj.perspective;
+          }
+        });
+
+        // Re-sincronizar con el backend
+        syncState().catch(() => {});
+
+        closeSubModal();
+        toast(`✓ ${checked.length} KPI(s) asociados con éxito al objetivo ${obj.id}.`, "success");
+
+        // Actualizar en tiempo real el modal de objetivo y las tablas detrás
+        showObjectiveDetail(obj.id);
+        renderPage(currentPage);
+      } catch (err) {
+        toast("Error al asociar KPIs: " + err.message, "error");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = `Confirmar Asociación (${checked.length})`;
+        }
+      }
+    },
+    "VINCULACIÓN ESTRATÉGICA"
+  );
+
+  const searchInput = $("#kpiAssocSearch");
+  const listContainer = $("#kpiAssocList");
+  const selectAllCb = $("#selectAllKpis");
+  const countSpan = $("#selectedKpiCount");
+  const submitBtn = $("#subModalSubmit");
+
+  const updateCounter = () => {
+    const totalSelected = document.querySelectorAll(".kpi-assoc-cb:checked").length;
+    if (countSpan) countSpan.textContent = totalSelected;
+    if (submitBtn) submitBtn.textContent = `Confirmar Asociación (${totalSelected})`;
+
+    document.querySelectorAll(".assoc-item").forEach(item => {
+      const cb = item.querySelector(".kpi-assoc-cb");
+      if (cb && cb.checked) {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      listContainer.innerHTML = renderList(searchInput.value);
+      if (selectAllCb) selectAllCb.checked = false;
+      updateCounter();
+    });
+  }
+
+  if (selectAllCb) {
+    selectAllCb.addEventListener("change", () => {
+      const cbs = document.querySelectorAll(".kpi-assoc-cb");
+      cbs.forEach(cb => { cb.checked = selectAllCb.checked; });
+      updateCounter();
+    });
+  }
+
+  if (listContainer) {
+    listContainer.addEventListener("change", (e) => {
+      if (e.target.classList.contains("kpi-assoc-cb")) {
+        updateCounter();
+      }
+    });
+  }
+}
+
+function openAsociarIniciativaModal(objectiveId) {
+  const obj = state.objectives.find(o => o.id === objectiveId);
+  if (!obj) {
+    toast("No se encontró el objetivo especificado.", "error");
+    return;
+  }
+
+  const inits = state.initiatives || [];
+  const availableInits = inits.filter(i => i.objectiveId !== objectiveId);
+
+  if (availableInits.length === 0) {
+    showSubModal(
+      `Asociar Iniciativas a ${obj.id}`,
+      `<div class="info-box">
+        <strong>Todas las iniciativas existentes ya pertenecen a este objetivo o no hay iniciativas registradas.</strong>
+        <p>Puedes crear un nuevo proyecto estratégico desde el portafolio de iniciativas.</p>
+      </div>`,
+      "Nueva Iniciativa",
+      () => {
+        closeSubModal();
+        openInitiativeForm();
+      },
+      "PORTAFOLIO DE INICIATIVAS"
+    );
+    return;
+  }
+
+  const renderList = (filterText = "") => {
+    const q = filterText.toLowerCase().trim();
+    const filtered = availableInits.filter(i =>
+      !q || `${i.id} ${i.name} ${i.leader || i.owner || ""} ${i.status}`.toLowerCase().includes(q)
+    );
+
+    if (filtered.length === 0) {
+      return `<p class="muted" style="padding:24px;text-align:center">No se encontraron iniciativas que coincidan con "${escapeHtml(filterText)}".</p>`;
+    }
+
+    return filtered.map(i => {
+      const currentObj = state.objectives.find(o => o.id === i.objectiveId);
+      const isDone = i.status === "Completado" || i.status === "Finalizada";
+      return `<label class="assoc-item" data-init-id="${i.id}">
+        <input type="checkbox" class="init-assoc-cb" value="${i.id}">
+        <div class="assoc-item-content">
+          <div class="assoc-item-title">
+            <span class="assoc-badge" style="background:#d9770618;color:#d97706">${escapeHtml(i.id || "INI")}</span>
+            <span>${escapeHtml(i.name)}</span>
+          </div>
+          <div class="assoc-item-sub">
+            Líder: <strong>${escapeHtml(i.leader || i.owner || "Responsable")}</strong> · Estado: <span class="status ${isDone ? "good" : "blue"}">${escapeHtml(i.status)}</span> · Avance: <strong>${i.progress || 0}%</strong><br>
+            ${currentObj ? `Actualmente vinculada a: <em>${escapeHtml(currentObj.id + " · " + currentObj.name)}</em>` : `<span style="color:#d97706;font-weight:600">Sin objetivo asignado</span>`}
+          </div>
+          <div class="assoc-item-target">
+            Presupuesto Asignado: ${currency(i.budget || 0)}
+          </div>
+        </div>
+      </label>`;
+    }).join("");
+  };
+
+  const body = `<div class="assoc-container">
+    <div class="info-box" style="margin:0">
+      Objetivo destino: <strong>${escapeHtml(obj.id)}: ${escapeHtml(obj.name)}</strong><br>
+      <small class="muted">Selecciona una o más iniciativas estratégicas para vincularlas a este objetivo.</small>
+    </div>
+    <input type="text" id="initAssocSearch" class="assoc-search-box" placeholder="🔍 Buscar iniciativa por código, título, líder...">
+    <div class="assoc-header">
+      <label><input type="checkbox" id="selectAllInits"> Seleccionar todas las visibles</label>
+      <span><span id="selectedInitCount" class="assoc-counter">0</span> de ${availableInits.length} disponibles</span>
+    </div>
+    <div id="initAssocList" class="assoc-list">
+      ${renderList()}
+    </div>
+  </div>`;
+
+  showSubModal(
+    `Asociar Iniciativas al Objetivo ${obj.id}`,
+    body,
+    "Confirmar Asociación (0)",
+    async () => {
+      const checked = [...document.querySelectorAll(".init-assoc-cb:checked")].map(cb => cb.value);
+      if (checked.length === 0) {
+        toast("Selecciona al menos una iniciativa para asociar.", "error");
+        return;
+      }
+
+      const submitBtn = $("#subModalSubmit");
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Guardando en Servidor...";
+      }
+
+      try {
+        let res;
+        try {
+          res = await API.asociarIniciativas(obj.id, checked);
+        } catch (netErr) {
+          console.warn("Fallo de red en asociar-iniciativas, aplicando actualización local:", netErr);
+        }
+
+        (state.initiatives || []).forEach(i => {
+          if (checked.includes(i.id)) {
+            i.objectiveId = obj.id;
+          }
+        });
+        state.iniciativas = state.initiatives;
+
+        syncState().catch(() => {});
+
+        closeSubModal();
+        toast(`✓ ${checked.length} iniciativa(s) asociadas con éxito al objetivo ${obj.id}.`, "success");
+
+        showObjectiveDetail(obj.id);
+        renderPage(currentPage);
+      } catch (err) {
+        toast("Error al asociar iniciativas: " + err.message, "error");
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = `Confirmar Asociación (${checked.length})`;
+        }
+      }
+    },
+    "VINCULACIÓN DE PROYECTOS"
+  );
+
+  const searchInput = $("#initAssocSearch");
+  const listContainer = $("#initAssocList");
+  const selectAllCb = $("#selectAllInits");
+  const countSpan = $("#selectedInitCount");
+  const submitBtn = $("#subModalSubmit");
+
+  const updateCounter = () => {
+    const totalSelected = document.querySelectorAll(".init-assoc-cb:checked").length;
+    if (countSpan) countSpan.textContent = totalSelected;
+    if (submitBtn) submitBtn.textContent = `Confirmar Asociación (${totalSelected})`;
+
+    document.querySelectorAll(".assoc-item").forEach(item => {
+      const cb = item.querySelector(".init-assoc-cb");
+      if (cb && cb.checked) {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  };
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      listContainer.innerHTML = renderList(searchInput.value);
+      if (selectAllCb) selectAllCb.checked = false;
+      updateCounter();
+    });
+  }
+
+  if (selectAllCb) {
+    selectAllCb.addEventListener("change", () => {
+      const cbs = document.querySelectorAll(".init-assoc-cb");
+      cbs.forEach(cb => { cb.checked = selectAllCb.checked; });
+      updateCounter();
+    });
+  }
+
+  if (listContainer) {
+    listContainer.addEventListener("change", (e) => {
+      if (e.target.classList.contains("init-assoc-cb")) {
+        updateCounter();
+      }
+    });
+  }
+}
+
 function showObjectiveDetail(id) {
+  state.currentObjectiveDetailId = id;
   const o = state.objectives.find(x => x.id === id);
   if (!o) return;
   const ks = state.kpis.filter(k => k.objectiveId === id);
-  const ins = state.initiatives.filter(i => i.objectiveId === id);
+  const ins = (state.initiatives || []).filter(i => i.objectiveId === id);
   const avg = ks.length > 0 ? Number((ks.reduce((a, b) => a + (b.pct || 0), 0) / ks.length).toFixed(1)) : null;
 
   const body = `<div class="grid" style="gap:14px">
@@ -1620,17 +2016,21 @@ function showObjectiveDetail(id) {
     </div>
     <div style="display:flex;justify-content:space-between;align-items:center">
       <h3 style="margin:0">KPIs Vinculados (${ks.length})</h3>
-      <button class="btn small" data-action="new-kpi">＋ Asociar nuevo KPI</button>
+      <button class="btn small btn-asociar-kpi" data-action="asociar-kpi" data-id="${o.id}">＋ Asociar nuevo KPI</button>
     </div>
     ${renderKpiTable(ks, true)}
-    <h3 style="margin:0">Iniciativas Vinculadas (${ins.length})</h3>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+      <h3 style="margin:0">Iniciativas Vinculadas (${ins.length})</h3>
+      <button class="btn small btn-asociar-iniciativa" data-action="asociar-iniciativa" data-id="${o.id}">＋ Asociar nueva iniciativa</button>
+    </div>
     ${ins.map(i => `<div class="objective-card">
       <div class="objective-symbol">◈</div>
-      <div>
+      <div style="flex:1">
         <h3>${escapeHtml(i.name)}</h3>
-        <p>Responsable: ${escapeHtml(i.owner)} · Avance: ${i.progress}% · Presupuesto: ${currency(i.budget)}</p>
-        <span class="status ${i.status === "Finalizada" ? "good" : "blue"}">${escapeHtml(i.status)}</span>
+        <p>Responsable: ${escapeHtml(i.leader || i.owner || "Responsable")} · Avance: ${i.progress || 0}% · Presupuesto: ${currency(i.budget || 0)}</p>
+        <span class="status ${i.status === "Finalizada" || i.status === "Completado" ? "good" : "blue"}">${escapeHtml(i.status)}</span>
       </div>
+      <button class="btn small" data-action="initiative-detail" data-id="${i.id}">Ver Ficha</button>
     </div>`).join("") || `<p class="muted">No hay iniciativas registradas para este objetivo.</p>`}
   </div>`;
 
@@ -2042,6 +2442,83 @@ function confirmReset() {
 
 async function init() {
   await syncState();
+
+  // Delegación global de clics para capturar cualquier elemento interactivo en modales, submodales y cuerpo
+  document.addEventListener("click", e => {
+    // 1. Botones de cierre / cancelación de modales principales y submodales
+    if (e.target.closest("#modalClose, #modalCancel, #modalCloseAction")) {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+    if (e.target.closest("#subModalClose, #subModalCancel")) {
+      e.preventDefault();
+      closeSubModal();
+      return;
+    }
+
+    // 2. Botón "+ Asociar nuevo KPI" (detectar por clase, atributo data-action o texto)
+    const btnAsocKpi = e.target.closest(".btn-asociar-kpi, [data-action='asociar-kpi']");
+    if (btnAsocKpi) {
+      e.preventDefault();
+      e.stopPropagation();
+      const objId = btnAsocKpi.dataset.id || state.currentObjectiveDetailId;
+      if (objId) openAsociarKpiModal(objId);
+      else openKpiForm();
+      return;
+    }
+
+    const anyBtn = e.target.closest("button");
+    if (anyBtn && anyBtn.textContent && anyBtn.textContent.includes("Asociar nuevo KPI")) {
+      e.preventDefault();
+      e.stopPropagation();
+      const objId = anyBtn.dataset.id || state.currentObjectiveDetailId;
+      if (objId) openAsociarKpiModal(objId);
+      else openKpiForm();
+      return;
+    }
+
+    // 3. Botón "+ Asociar nueva iniciativa"
+    const btnAsocInit = e.target.closest(".btn-asociar-iniciativa, [data-action='asociar-iniciativa']");
+    if (btnAsocInit) {
+      e.preventDefault();
+      e.stopPropagation();
+      const objId = btnAsocInit.dataset.id || state.currentObjectiveDetailId;
+      if (objId) openAsociarIniciativaModal(objId);
+      else openInitiativeForm();
+      return;
+    }
+
+    if (anyBtn && anyBtn.textContent && anyBtn.textContent.includes("Asociar nueva iniciativa")) {
+      e.preventDefault();
+      e.stopPropagation();
+      const objId = anyBtn.dataset.id || state.currentObjectiveDetailId;
+      if (objId) openAsociarIniciativaModal(objId);
+      else openInitiativeForm();
+      return;
+    }
+
+    // 4. Capturar acciones [data-action] que se encuentren dentro de modales o fuera de #pageContent
+    const actionEl = e.target.closest("[data-action]");
+    if (actionEl && !$("#pageContent")?.contains(actionEl)) {
+      e.preventDefault();
+      const act = actionEl.dataset.action;
+      const id = actionEl.dataset.id;
+      handleAction(act, id, actionEl.dataset);
+      return;
+    }
+  });
+
+  // Atajo de teclado Escape para cerrar capas modales
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      if (!$("#subModalLayer")?.classList.contains("hidden")) {
+        closeSubModal();
+      } else if (!$("#modalLayer")?.classList.contains("hidden")) {
+        closeModal();
+      }
+    }
+  });
 
   $("#loginForm")?.addEventListener("submit", e => {
     e.preventDefault();

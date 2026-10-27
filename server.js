@@ -454,6 +454,100 @@ app.delete('/api/objetivos/:id', (req, res) => {
   }
 });
 
+// 2.3 POST /api/objetivos/:id/asociar-kpis
+app.post('/api/objetivos/:id/asociar-kpis', (req, res) => {
+  try {
+    const data = loadData();
+    const objId = req.params.id;
+    const obj = (data.objectives || []).find(o => o.id === objId);
+    if (!obj) {
+      return res.status(404).json({ error: `Objetivo ${objId} no encontrado.` });
+    }
+
+    const { kpiIds } = req.body;
+    if (!Array.isArray(kpiIds) || kpiIds.length === 0) {
+      return res.status(400).json({ error: "Debe proporcionar una lista de kpiIds a asociar." });
+    }
+
+    let modified = 0;
+    (data.kpis || []).forEach(k => {
+      if (kpiIds.includes(k.id)) {
+        k.objectiveId = objId;
+        if (obj.perspective) k.perspective = obj.perspective;
+        modified++;
+      }
+    });
+
+    if (!data.audit) data.audit = [];
+    data.audit.unshift({
+      id: "AUD-" + String(Date.now()).slice(-8),
+      date: new Date().toISOString(),
+      user: obj.owner || "Administrador",
+      action: "Asociación de KPIs",
+      entity: `${obj.id} · ${obj.name}`,
+      detail: `Se asociaron ${modified} KPI(s) (${kpiIds.join(", ")}) al objetivo ${objId}`
+    });
+
+    saveData(data);
+    res.json({
+      success: true,
+      message: `${modified} KPI(s) asociados con éxito al objetivo ${objId}.`,
+      objectiveId: objId,
+      kpiIds,
+      dashboard: computeDashboard(data)
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Error al asociar KPIs", details: error.message });
+  }
+});
+
+// 2.4 POST /api/objetivos/:id/asociar-iniciativas
+app.post('/api/objetivos/:id/asociar-iniciativas', (req, res) => {
+  try {
+    const data = loadData();
+    const objId = req.params.id;
+    const obj = (data.objectives || []).find(o => o.id === objId);
+    if (!obj) {
+      return res.status(404).json({ error: `Objetivo ${objId} no encontrado.` });
+    }
+
+    const { initiativeIds } = req.body;
+    if (!Array.isArray(initiativeIds) || initiativeIds.length === 0) {
+      return res.status(400).json({ error: "Debe proporcionar una lista de initiativeIds a asociar." });
+    }
+
+    if (!data.iniciativas) data.iniciativas = data.initiatives || [];
+    let modified = 0;
+    data.iniciativas.forEach(i => {
+      if (initiativeIds.includes(i.id)) {
+        i.objectiveId = objId;
+        modified++;
+      }
+    });
+    data.initiatives = data.iniciativas;
+
+    if (!data.audit) data.audit = [];
+    data.audit.unshift({
+      id: "AUD-" + String(Date.now()).slice(-8),
+      date: new Date().toISOString(),
+      user: obj.owner || "Administrador",
+      action: "Asociación de Iniciativas",
+      entity: `${obj.id} · ${obj.name}`,
+      detail: `Se asociaron ${modified} iniciativa(s) (${initiativeIds.join(", ")}) al objetivo ${objId}`
+    });
+
+    saveData(data);
+    res.json({
+      success: true,
+      message: `${modified} iniciativa(s) asociadas con éxito al objetivo ${objId}.`,
+      objectiveId: objId,
+      initiativeIds
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Error al asociar iniciativas", details: error.message });
+  }
+});
+
 // 3. GET /api/kpis (Soporta query ?period=YYYY)
 app.get('/api/kpis', (req, res) => {
   try {

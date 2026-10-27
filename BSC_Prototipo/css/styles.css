@@ -1653,6 +1653,138 @@ tbody tr:hover {
   background: #f8fafc;
 }
 
+/* --- Estilos para Sub-Modales de Asociación --- */
+.assoc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.assoc-search-box {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.assoc-search-box:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.assoc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.assoc-header label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 0;
+  user-select: none;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.assoc-list {
+  max-height: 340px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.assoc-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  user-select: none;
+}
+
+.assoc-item:last-child {
+  border-bottom: none;
+}
+
+.assoc-item:hover {
+  background: var(--primary-light);
+}
+
+.assoc-item.selected {
+  background: #fffbeb;
+}
+
+.assoc-item input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-top: 3px;
+  accent-color: var(--primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.assoc-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.assoc-item-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 3px;
+}
+
+.assoc-item-sub {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.assoc-item-target {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.assoc-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.assoc-counter {
+  font-weight: 700;
+  color: var(--primary);
+}
+
 /* --- 14. Notificaciones, Toasts y Utilidades --- */
 .toast-region {
   position: fixed;
