@@ -660,32 +660,152 @@ app.post('/api/reset', (req, res) => {
   }
 });
 
-// Endpoints de Iniciativas y Auditoría
+// ==========================================
+// ENDPOINTS DE INICIATIVAS ESTRATÉGICAS
+// ==========================================
+
+// GET /api/iniciativas
 app.get('/api/iniciativas', (req, res) => {
   try {
     const data = loadData();
-    res.json(data.initiatives || []);
+    const list = data.iniciativas || data.initiatives || [];
+    res.json(list);
   } catch (error) {
     res.status(500).json({ error: "Error al obtener iniciativas", details: error.message });
   }
 });
 
+// POST /api/iniciativas
+// Recibe { name, objectiveId, leader, budget, progress, status, startDate, endDate }, valida, genera ID único (INI-XX), guarda en 'data_techperu.json' y responde 201.
 app.post('/api/iniciativas', (req, res) => {
   try {
     const data = loadData();
-    const init = req.body;
-    if (!init.id) {
-      init.id = "INI-" + String((data.initiatives || []).length + 1).padStart(2, '0');
-      data.initiatives.push(init);
-    } else {
-      const idx = data.initiatives.findIndex(i => i.id === init.id);
-      if (idx >= 0) data.initiatives[idx] = { ...data.initiatives[idx], ...init };
-      else data.initiatives.push(init);
+    if (!data.iniciativas) data.iniciativas = data.initiatives || [];
+    if (!data.initiatives) data.initiatives = data.iniciativas;
+
+    const { name, objectiveId, leader, budget, progress, status, startDate, endDate, owner, start, end, description } = req.body;
+
+    if (!name || !name.trim()) {
+      return res.status(400).json({ error: "El nombre de la iniciativa es obligatorio." });
     }
+    if (!objectiveId || !objectiveId.trim()) {
+      return res.status(400).json({ error: "El objetivo estratégico asociado es obligatorio." });
+    }
+
+    // Generar ID único (INI-XX) calculando el número máximo actual
+    const maxIdNum = (data.iniciativas || []).reduce((max, item) => {
+      const m = String(item.id || "").match(/\d+/);
+      return m ? Math.max(max, parseInt(m[0], 10)) : max;
+    }, 0);
+    const generatedId = `INI-${String(maxIdNum + 1).padStart(2, '0')}`;
+
+    const effectiveLeader = leader || owner || "Responsable";
+    const effectiveStart = startDate || start || new Date().toISOString().split('T')[0];
+    const effectiveEnd = endDate || end || "";
+    const effectiveBudget = Number(budget) || 0;
+    const effectiveProgress = Math.min(100, Math.max(0, Number(progress) || 0));
+    const effectiveStatus = status || "En progreso";
+
+    let area = "Operaciones y Calidad";
+    const obj = (data.objectives || []).find(o => o.id === objectiveId.trim());
+    if (obj && obj.perspective) {
+      const pers = data.perspectivas?.[obj.perspective];
+      if (pers && pers.defaultArea) area = pers.defaultArea;
+    }
+
+    const newInitiative = {
+      id: generatedId,
+      name: name.trim(),
+      objectiveId: objectiveId.trim(),
+      leader: effectiveLeader,
+      owner: effectiveLeader,
+      area: area,
+      budget: effectiveBudget,
+      progress: effectiveProgress,
+      status: effectiveStatus,
+      startDate: effectiveStart,
+      endDate: effectiveEnd,
+      start: effectiveStart,
+      end: effectiveEnd,
+      description: description || `Iniciativa estratégica para ${objectiveId.trim()} en TechPeru SAC.`
+    };
+
+    data.iniciativas.push(newInitiative);
+    data.initiatives = data.iniciativas;
+
+    if (!data.audit) data.audit = [];
+    data.audit.unshift({
+      id: "AUD-" + String(Date.now()).slice(-8),
+      date: new Date().toISOString(),
+      user: effectiveLeader,
+      action: "Creación de Iniciativa",
+      entity: `${newInitiative.id} · ${newInitiative.name}`,
+      detail: `Iniciativa asignada a ${newInitiative.objectiveId} con presupuesto S/ ${newInitiative.budget}`
+    });
+
     saveData(data);
-    res.json({ success: true, initiative: init });
+    res.status(201).json({
+      success: true,
+      message: "Iniciativa creada con éxito.",
+      initiative: newInitiative
+    });
   } catch (error) {
-    res.status(500).json({ error: "Error al guardar iniciativa", details: error.message });
+    res.status(500).json({ error: "Error al crear iniciativa", details: error.message });
+  }
+});
+
+// PUT /api/iniciativas/:id
+// Permite actualizar el avance (%), presupuesto o estado de una iniciativa y persiste en 'data_techperu.json'.
+app.put('/api/iniciativas/:id', (req, res) => {
+  try {
+    const data = loadData();
+    if (!data.iniciativas) data.iniciativas = data.initiatives || [];
+    if (!data.initiatives) data.initiatives = data.iniciativas;
+
+    const targetId = req.params.id;
+    const idx = data.iniciativas.findIndex(i => i.id === targetId);
+    if (idx === -1) {
+      return res.status(404).json({ error: `Iniciativa con ID ${targetId} no encontrada.` });
+    }
+
+    const current = data.iniciativas[idx];
+    const updates = req.body;
+
+    const updated = {
+      ...current,
+      ...updates,
+      id: current.id
+    };
+
+    if (updates.budget !== undefined) updated.budget = Number(updates.budget) || 0;
+    if (updates.progress !== undefined) updated.progress = Math.min(100, Math.max(0, Number(updates.progress) || 0));
+    if (updates.status !== undefined) updated.status = updates.status;
+    if (updates.leader) { updated.leader = updates.leader; updated.owner = updates.leader; }
+    if (updates.owner) { updated.owner = updates.owner; updated.leader = updates.owner; }
+    if (updates.startDate) { updated.startDate = updates.startDate; updated.start = updates.startDate; }
+    if (updates.endDate) { updated.endDate = updates.endDate; updated.end = updates.endDate; }
+
+    data.iniciativas[idx] = updated;
+    data.initiatives = data.iniciativas;
+
+    if (!data.audit) data.audit = [];
+    data.audit.unshift({
+      id: "AUD-" + String(Date.now()).slice(-8),
+      date: new Date().toISOString(),
+      user: updated.leader || "Responsable",
+      action: "Actualización de Iniciativa",
+      entity: `${updated.id} · ${updated.name}`,
+      detail: `Estado: ${updated.status}, Avance: ${updated.progress}%, Presupuesto: S/ ${updated.budget}`
+    });
+
+    saveData(data);
+    res.json({
+      success: true,
+      message: "Iniciativa actualizada con éxito.",
+      initiative: updated
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Error al actualizar iniciativa", details: error.message });
   }
 });
 

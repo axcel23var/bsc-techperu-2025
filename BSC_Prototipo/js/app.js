@@ -75,6 +75,14 @@ const API = {
     });
     return res.json();
   },
+  async putIniciativa(id, payload) {
+    const res = await fetch(`/api/iniciativas/${encodeURIComponent(id)}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    return res.json();
+  },
   async getAudit() {
     const res = await fetch('/api/audit');
     if (!res.ok) return [];
@@ -726,23 +734,30 @@ function measurementTable(items) {
 }
 
 function renderInitiatives() {
+  const inits = state.initiatives || [];
+  const enEjecucion = inits.filter(i => i.status === "En ejecución" || i.status === "En progreso").length;
+  const totalBudget = inits.reduce((a, b) => a + (Number(b.budget) || 0), 0);
+  const avgProgress = inits.length > 0 ? (inits.reduce((a, b) => a + (Number(b.progress) || 0), 0) / inits.length) : 0;
+
   return `${pageHead("Iniciativas estratégicas", "Proyectos y planes de acción vinculados a los objetivos y KPIs de TechPeru SAC.", `<button class="btn primary" data-action="new-initiative">＋ Nueva iniciativa</button>`)}
   <div class="grid metric-grid">
-    ${metricCard("Total Iniciativas", state.initiatives.length, "Portafolio estratégico", "◈")}
-    ${metricCard("En Ejecución", state.initiatives.filter(i => i.status === "En ejecución").length, "Proyectos activos", "↗", "green")}
-    ${metricCard("Presupuesto Total", currency(state.initiatives.reduce((a, b) => a + (b.budget || 0), 0)), "Inversión planificada", "💰", "amber")}
-    ${metricCard("Avance Promedio", fmt(state.initiatives.reduce((a, b) => a + (b.progress || 0), 0) / Math.max(1, state.initiatives.length), 0) + "%", "Seguimiento global", "✓", "green")}
+    ${metricCard("Total Iniciativas", inits.length, "Portafolio estratégico", "◈")}
+    ${metricCard("En Progreso / Ejecución", enEjecucion, "Proyectos activos", "↗", "green")}
+    ${metricCard("Presupuesto Total", currency(totalBudget), "Inversión planificada", "💰", "amber")}
+    ${metricCard("Avance Promedio", fmt(avgProgress, 0) + "%", "Seguimiento global", "✓", "green")}
   </div>
   <div class="toolbar">
-    <div class="search-box"><input id="initiativeSearch" placeholder="Buscar iniciativa o responsable…"></div>
+    <div class="search-box"><input id="initiativeSearch" placeholder="Buscar iniciativa, objetivo o responsable…"></div>
     <select id="initiativeStatus">
       <option value="">Todos los estados</option>
+      <option>En progreso</option>
+      <option>Completado</option>
       <option>En ejecución</option>
       <option>Planificada</option>
       <option>Finalizada</option>
     </select>
   </div>
-  <div id="initiativeTableWrap" class="table-panel">${initiativesTable(state.initiatives)}</div>`;
+  <div id="initiativeTableWrap" class="table-panel">${initiativesTable(inits)}</div>`;
 }
 
 function initiativesTable(items) {
@@ -752,7 +767,7 @@ function initiativesTable(items) {
         <tr>
           <th>Código</th>
           <th>Iniciativa Estratégica</th>
-          <th>Objetivo / KPI</th>
+          <th>Objetivo Asociado</th>
           <th>Responsable</th>
           <th>Plazos</th>
           <th>Presupuesto</th>
@@ -762,26 +777,34 @@ function initiativesTable(items) {
         </tr>
       </thead>
       <tbody>
-        ${items.map(i => `<tr>
+        ${(items || []).map(i => {
+          const leaderName = i.leader || i.owner || "Responsable";
+          const startDate = i.startDate || i.start || "";
+          const endDate = i.endDate || i.end || "";
+          const isDone = i.status === "Completado" || i.status === "Finalizada";
+          const prog = Number(i.progress) || 0;
+          return `<tr>
           <td><span class="code">${escapeHtml(i.id)}</span></td>
           <td><span class="table-title">${escapeHtml(i.name)}</span><span class="subcell">${escapeHtml(i.description || "")}</span></td>
-          <td><span class="code">${escapeHtml(i.objectiveId || "")}</span><span class="subcell">${escapeHtml(kpiName(i.kpiId))}</span></td>
-          <td>${escapeHtml(i.owner)}<span class="subcell">${escapeHtml(i.area || "")}</span></td>
-          <td>${escapeHtml(i.start)}<span class="subcell">hasta ${escapeHtml(i.end)}</span></td>
+          <td><span class="code">${escapeHtml(i.objectiveId || "")}</span><span class="subcell">${escapeHtml(objectiveName(i.objectiveId))}</span></td>
+          <td>${escapeHtml(leaderName)}<span class="subcell">${escapeHtml(i.area || "")}</span></td>
+          <td>${escapeHtml(startDate)}<span class="subcell">${endDate ? `hasta ${escapeHtml(endDate)}` : ""}</span></td>
           <td>${currency(i.budget)}</td>
           <td>
             <div class="initiative-progress">
-              <div class="progress-track"><div class="progress-fill" style="width:${i.progress}%;background:${i.progress >= 80 ? "#16845b" : "#3478e5"}"></div></div>
-              <b>${i.progress}%</b>
+              <div class="progress-track"><div class="progress-fill" style="width:${prog}%;background:${prog >= 80 ? "#16845b" : "#3478e5"}"></div></div>
+              <b>${prog}%</b>
             </div>
           </td>
-          <td><span class="status ${i.status === "Finalizada" ? "good" : "blue"}">${escapeHtml(i.status)}</span></td>
+          <td><span class="status ${isDone ? "good" : "blue"}">${escapeHtml(i.status)}</span></td>
           <td>
             <div class="table-actions">
+              <button class="text-action" data-action="edit-initiative" data-id="${i.id}">Editar</button>
               <button class="text-action" data-action="initiative-detail" data-id="${i.id}">Detalle</button>
             </div>
           </td>
-        </tr>`).join("") || `<tr><td colspan="9"><div class="empty-state">No hay iniciativas registradas.</div></td></tr>`}
+        </tr>`;
+        }).join("") || `<tr><td colspan="9"><div class="empty-state">No hay iniciativas registradas.</div></td></tr>`}
       </tbody>
     </table>
   </div>`;
@@ -969,11 +992,23 @@ const renderers = {
   administracion: renderAdministration
 };
 
-function renderPage(page) {
+async function renderPage(page) {
   currentPage = page;
   $("#breadcrumbPage").textContent = pageTitles[page] || "Dashboard ejecutivo";
   $$(".nav-item").forEach(b => b.classList.toggle("active", b.dataset.page === page));
   destroyCharts();
+
+  if (page === "iniciativas") {
+    try {
+      const inits = await API.getIniciativas();
+      if (Array.isArray(inits) && inits.length > 0) {
+        state.initiatives = inits;
+        state.iniciativas = inits;
+      }
+    } catch (e) {
+      console.warn("No se pudo refrescar /api/iniciativas:", e);
+    }
+  }
 
   const fn = renderers[page] || renderDashboard;
   $("#pageContent").innerHTML = fn();
@@ -1157,11 +1192,12 @@ function applyTableFilters(page) {
   if (page === "iniciativas") {
     const q = ($("#initiativeSearch")?.value || "").toLowerCase();
     const st = $("#initiativeStatus")?.value || "";
-    const items = state.initiatives.filter(i =>
-      (!q || `${i.id} ${i.name} ${i.owner}`.toLowerCase().includes(q)) &&
+    const items = (state.initiatives || []).filter(i =>
+      (!q || `${i.id} ${i.name} ${i.leader || i.owner || ""} ${i.objectiveId || ""}`.toLowerCase().includes(q)) &&
       (!st || i.status === st)
     );
-    $("#initiativeTableWrap").innerHTML = initiativesTable(items);
+    const wrap = $("#initiativeTableWrap");
+    if (wrap) wrap.innerHTML = initiativesTable(items);
   }
 }
 
@@ -1179,6 +1215,8 @@ async function handleAction(action, id, data = {}) {
     case "kpi-detail": showKpiDetail(id); break;
     case "measure-kpi": openMeasurementForm(null, id); break;
     case "new-measurement": openMeasurementForm(); break;
+    case "new-initiative": openInitiativeForm(); break;
+    case "edit-initiative": openInitiativeForm(id); break;
     case "initiative-detail": showInitiativeDetail(id); break;
     case "report-type": generateReport(data.type); break;
     case "export-report": exportCurrentReport(); break;
@@ -1689,27 +1727,182 @@ function showKpiDetail(id) {
   }
 }
 
-function showInitiativeDetail(id) {
-  const i = state.initiatives.find(x => x.id === id);
-  if (!i) return;
-  const body = `<div class="grid" style="gap:13px">
-    <div class="info-box">
-      <h3 style="margin:0 0 8px">${escapeHtml(i.name)}</h3>
-      ${escapeHtml(i.description || "")}
-      <p style="margin-top:10px">
-        <strong>Objetivo:</strong> ${escapeHtml(i.objectiveId)} · ${escapeHtml(objectiveName(i.objectiveId))}<br>
-        <strong>KPI Vinculado:</strong> ${escapeHtml(kpiName(i.kpiId))}<br>
-        <strong>Responsable:</strong> ${escapeHtml(i.owner)} · ${escapeHtml(i.area || "")}<br>
-        <strong>Fechas:</strong> ${escapeHtml(i.start)} hasta ${escapeHtml(i.end)}<br>
-        <strong>Presupuesto:</strong> ${currency(i.budget)}
-      </p>
+function openInitiativeForm(id = null) {
+  const existing = id ? (state.initiatives || []).find(x => x.id === id) : null;
+  const isEditing = Boolean(existing);
+
+  const current = existing || {
+    id: "",
+    name: "",
+    objectiveId: state.objectives[0]?.id || "OBJ-C4",
+    leader: "Jorge Salcedo",
+    budget: 45000,
+    progress: 0,
+    status: "En progreso",
+    startDate: new Date().toISOString().split('T')[0],
+    endDate: "2025-12-31",
+    description: ""
+  };
+
+  const objectiveOptions = state.objectives.map(o =>
+    `<option value="${o.id}" ${current.objectiveId === o.id ? "selected" : ""}>${o.id} · ${escapeHtml(o.name)}</option>`
+  ).join("");
+
+  const allLeaders = [...new Set([
+    "Jorge Salcedo",
+    "María Valdivia",
+    "Lucía Paredes",
+    "Patricia Ramos",
+    "Elena Morales",
+    "Carlos Mendoza",
+    ...(state.users || []).map(u => u.name)
+  ])];
+
+  const leaderOptions = allLeaders.map(n =>
+    `<option value="${escapeHtml(n)}" ${(current.leader || current.owner) === n ? "selected" : ""}>${escapeHtml(n)}</option>`
+  ).join("");
+
+  const statusList = ["En progreso", "Completado", "En ejecución", "Planificada", "Finalizada"];
+  const statusOptions = statusList.map(s =>
+    `<option value="${s}" ${current.status === s ? "selected" : ""}>${s}</option>`
+  ).join("");
+
+  const body = `<form id="initiativeForm" class="detail-form-grid">
+    <div class="field">
+      <label for="initId">Código de Iniciativa</label>
+      <input id="initId" value="${escapeHtml(current.id || "Auto-generado (INI-XX)")}" readonly style="background:#f1f5f9;color:#64748b">
     </div>
-    <div class="kpi-result">
-      <div><small>Avance de la Iniciativa</small><strong>${i.progress}%</strong></div>
-      <span class="status ${i.status === "Finalizada" ? "good" : "blue"}">${escapeHtml(i.status)}</span>
+    ${selectField("Objetivo Estratégico Asociado", "initObjectiveId", objectiveOptions)}
+    <div class="field full-span">
+      <label for="initName">Nombre de la Iniciativa Estratégica *</label>
+      <input id="initName" required value="${escapeHtml(current.name)}" placeholder="Ej: Implementación de Portal B2B de Autogestión de Clientes">
+    </div>
+    ${selectField("Líder / Responsable", "initLeader", leaderOptions)}
+    ${selectField("Estado del Proyecto", "initStatus", statusOptions)}
+    ${field("Presupuesto Asignado (S/)", "initBudget", current.budget || 0, "number", true, 'min="0" step="1000"')}
+    ${field("Avance (%)", "initProgress", current.progress || 0, "number", true, 'min="0" max="100" step="1"')}
+    ${field("Fecha de Inicio", "initStartDate", current.startDate || current.start || "", "date", false)}
+    ${field("Fecha de Fin / Término", "initEndDate", current.endDate || current.end || "", "date", false)}
+    <div class="field full-span">
+      <label for="initDescription">Descripción del Proyecto / Alcance</label>
+      <textarea id="initDescription" placeholder="Detalle el alcance de la iniciativa, entregables y metas esperadas...">${escapeHtml(current.description || "")}</textarea>
+    </div>
+    <div class="field full-span">
+      <div class="info-box">
+        Al guardar, la iniciativa se registrará en el Backend mediante <strong>/api/iniciativas</strong> y se actualizará en tiempo real la tabla y las métricas de portafolio.
+      </div>
+    </div>
+  </form>`;
+
+  showModal(
+    isEditing ? `Editar Iniciativa: ${current.id}` : "Nueva Iniciativa Estratégica",
+    body,
+    isEditing ? "Guardar Cambios" : "Crear Iniciativa",
+    async () => {
+      const nameVal = $("#initName")?.value.trim();
+      const objIdVal = $("#initObjectiveId")?.value;
+      if (!nameVal) {
+        toast("El nombre de la iniciativa es obligatorio.", "error");
+        return;
+      }
+      if (!objIdVal) {
+        toast("Debe asociar la iniciativa a un objetivo estratégico.", "error");
+        return;
+      }
+
+      const payload = {
+        name: nameVal,
+        objectiveId: objIdVal,
+        leader: $("#initLeader")?.value || "Responsable",
+        owner: $("#initLeader")?.value || "Responsable",
+        budget: Number($("#initBudget")?.value) || 0,
+        progress: Number($("#initProgress")?.value) || 0,
+        status: $("#initStatus")?.value || "En progreso",
+        startDate: $("#initStartDate")?.value || "",
+        endDate: $("#initEndDate")?.value || "",
+        start: $("#initStartDate")?.value || "",
+        end: $("#initEndDate")?.value || "",
+        description: $("#initDescription")?.value.trim() || ""
+      };
+
+      try {
+        let res;
+        if (isEditing && current.id) {
+          res = await API.putIniciativa(current.id, payload);
+        } else {
+          res = await API.postIniciativa(payload);
+        }
+
+        if (res.success || res.initiative) {
+          closeModal();
+          toast(res.message || "Iniciativa registrada con éxito.");
+          const freshInits = await API.getIniciativas();
+          if (Array.isArray(freshInits) && freshInits.length > 0) {
+            state.initiatives = freshInits;
+            state.iniciativas = freshInits;
+          }
+          await syncState();
+          await renderPage("iniciativas");
+        } else {
+          toast(res.error || res.message || "Error al guardar iniciativa", "error");
+        }
+      } catch (err) {
+        toast("Error de conexión: " + err.message, "error");
+      }
+    },
+    "PORTAFOLIO DE INICIATIVAS"
+  );
+}
+
+function showInitiativeDetail(id) {
+  const i = (state.initiatives || []).find(x => x.id === id);
+  if (!i) return;
+  const obj = state.objectives.find(o => o.id === i.objectiveId);
+  const leaderName = i.leader || i.owner || "Responsable";
+  const startDate = i.startDate || i.start || "—";
+  const endDate = i.endDate || i.end || "—";
+  const isDone = i.status === "Completado" || i.status === "Finalizada";
+  const prog = Number(i.progress) || 0;
+
+  const body = `<div class="grid" style="gap:14px">
+    <div class="detail-layout">
+      <div class="panel" style="box-shadow:none">
+        <span class="eyebrow">${escapeHtml(i.id)} · INICIATIVA ESTRATÉGICA</span>
+        <h3 style="font-size:18px;margin:8px 0">${escapeHtml(i.name)}</h3>
+        <p class="muted">${escapeHtml(i.description || "Iniciativa estratégica para el cumplimiento del Balanced Scorecard TechPeru SAC.")}</p>
+        <div class="kpi-result">
+          <div><small>Avance Registrado</small><strong>${prog}%</strong></div>
+          <span class="status ${isDone ? "good" : "blue"}">${escapeHtml(i.status)}</span>
+        </div>
+        <div class="initiative-progress" style="margin-top:12px">
+          <div class="progress-track" style="height:10px">
+            <div class="progress-fill" style="width:${prog}%;background:${prog >= 80 ? "#16845b" : "#3478e5"}"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel" style="box-shadow:none">
+        <h3 style="margin:0 0 10px;font-size:13px">Ficha del Proyecto</h3>
+        <p class="form-note">
+          <strong>Objetivo Asociado:</strong> ${escapeHtml(i.objectiveId || "—")} ${obj ? `· ${escapeHtml(obj.name)}` : ""}<br>
+          <strong>Líder / Responsable:</strong> ${escapeHtml(leaderName)} ${i.area ? `· ${escapeHtml(i.area)}` : ""}<br>
+          <strong>Presupuesto Oficial:</strong> ${currency(i.budget)}<br>
+          <strong>Plazo de Ejecución:</strong> ${escapeHtml(startDate)} hasta ${escapeHtml(endDate)}<br>
+          <strong>Estado Operativo:</strong> ${escapeHtml(i.status)}
+        </p>
+      </div>
     </div>
   </div>`;
-  showModal(i.id + " · Detalle de Iniciativa", body, "Cerrar", closeModal, "PORTAFOLIO DE PROYECTOS");
+
+  showModal(
+    `${i.id}: ${i.name}`,
+    body,
+    "Editar Iniciativa",
+    () => {
+      closeModal();
+      openInitiativeForm(i.id);
+    },
+    "PORTAFOLIO DE INICIATIVAS"
+  );
 }
 
 function generateReport(type) {
@@ -1898,6 +2091,13 @@ async function init() {
         document.removeEventListener("click", closePop);
       }
     });
+  });
+
+  window.addEventListener("hashchange", () => {
+    const h = location.hash.slice(1);
+    if (h && renderers[h] && h !== currentPage) {
+      navigate(h);
+    }
   });
 
   if (location.hash && renderers[location.hash.slice(1)]) {
